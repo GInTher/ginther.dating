@@ -10,6 +10,7 @@ import {
   makeStyles,
   TextField
 } from "@material-ui/core/";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -76,7 +77,7 @@ function SignUpForm() {
         color={"primary"}
         className={classes.getStartedButton}
       >
-        Start Swiping
+        <Link to={"/swipe"}>Start Swiping</Link>
       </Button>
     </Paper>
   );
