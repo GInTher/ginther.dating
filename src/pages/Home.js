@@ -3,12 +3,12 @@ import {
   Grid,
   makeStyles,
 } from "@material-ui/core/";
-import aliyah from "../aliyah.jpg";
-import cop from "../cop.jpeg";
-import doctor from "../doctor.jpeg";
-import woman from "../woman.jpeg";
+import aliyah from "../images/aliyah.jpg";
+import cop from "../images/cop.jpeg";
+import doctor from "../images/doctor.jpeg";
+import woman from "../images/woman.jpeg";
 import { pink } from "@material-ui/core/colors";
-import lumberjack from "../lumberjack.jpeg";
+import lumberjack from "../images/lumberjack.jpeg";
 import SignUpForm from "../components/SignUpForm";
 
 const useStyles = makeStyles(theme => ({
@@ -67,7 +67,7 @@ function Home() {
         <Grid item xs={12}>
           <h1>
             Over <span className={classes.highlightedText}>3 women</span>{" "}
-            recommended{" "}
+            approved of {" "}
             <span className={classes.highlightedText}>Adam Ginther.</span>
           </h1>
         </Grid>
@@ -107,7 +107,7 @@ function Home() {
             className={classes.image}
           />
           <h4>Lumberjack</h4>
-          <p>Known for being experienced with lots of wood.</p>
+          <p>A man known how to handle his wood well.</p>
         </Grid>
         <Grid item sm={4}>
           <img src={cop} alt={"A cop"} className={classes.image} />
@@ -129,6 +129,7 @@ function Home() {
           <span className={classes.highlightedText}>Adam Ginther</span> is
           waiting! 😉
         </h1>
+        {/* <SignUpForm /> */}
       </Grid>
     </Grid>
   );

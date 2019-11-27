@@ -4,6 +4,7 @@ import {
   createMuiTheme
 } from "@material-ui/core/";
 import Home from "./pages/Home";
+import Swipe from "./pages/Swipe";
 import { pink } from "@material-ui/core/colors";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <Route path="/swipe">
-          <h1>Hello there</h1>
+          <Swipe />
         </Route>
         <Route path="/home">
           <Home />
