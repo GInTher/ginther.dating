@@ -1,34 +1,20 @@
 import React from "react";
 import Card from "../components/Card";
-import { Grid, Paper, Tabs, Tab } from "@material-ui/core/";
-import {
-  People,
-  Person
-} from "@material-ui/icons";
+import { Grid } from "@material-ui/core/";
+import Navigation from "../components/Navigation";
 
-function Home() {
-
+function Swipe() {
   return (
     <>
       <Grid container spacing={3} justify={"center"}>
         <Grid item xs={12} lg={5} xl={8} justify={"center"}>
+          <h1>Get Swiping <span role="img" aria-label="Fire">🔥</span></h1>
           <Card />
         </Grid>
       </Grid>
-
-      <Paper square>
-        <Tabs
-          variant="fullWidth"
-          indicatorColor="primary"
-          textColor="primary"
-          aria-label="icon tabs example"
-        >
-          <Tab icon={<People />} aria-label="Matches" />
-          <Tab icon={<Person />} aria-label="Potential Matches" />
-        </Tabs>
-      </Paper>
+      <Navigation />
     </>
   );
 }
 
-export default Home;
+export default Swipe;
