@@ -7,7 +7,7 @@ function Swipe() {
   return (
     <>
       <Grid container spacing={3} justify={"center"}>
-        <Grid item xs={12} lg={5} xl={8} justify={"center"}>
+        <Grid item xs={12} lg={5} xl={8}>
           <h1>Get Swiping <span role="img" aria-label="Fire">🔥</span></h1>
           <Card />
         </Grid>

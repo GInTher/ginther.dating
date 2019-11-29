@@ -89,14 +89,14 @@ function Home() {
           <h6>- Adam's friend from grade 2</h6>
         </Grid>
         <Grid item sm={4}>
-          <p>"He's my favourite son"</p>
-          <h6>- Adam's mom</h6>
+          <p>Some other quote here</p>
+          <h6>- X</h6>
         </Grid>
       </Grid>
       <Grid container xs={8} align={"center"}>
         <Grid item xs={12}>
           <h1>
-            With people like this
+            With people as successful as this
             <br /> How could you ever say no?
           </h1>
         </Grid>
@@ -125,12 +125,22 @@ function Home() {
 
       <Grid item sm={8} align="center">
         <h1>
-          Well, what are you waiting for? <br />
-          <span className={classes.highlightedText}>Adam Ginther</span> is
-          waiting! 😉
+          Have the right conversations with the <span className={classes.highlightedText}>right people.</span>
         </h1>
-        {/* <SignUpForm /> */}
       </Grid>
+
+      <Grid item xs={12} lg={5} xl={6} justify={"center"}>
+        <h1 className={classes.mainHeader}>
+          Well, what are you waiting for?
+          <span className={classes.highlightedText}>Adam Ginther</span> is waiting!
+        </h1>
+      </Grid>
+
+      <Grid item xs={12} lg={5} xl={6} justify={"center"}>
+      <SignUpForm />
+       
+      </Grid>
+      
     </Grid>
   );
 }

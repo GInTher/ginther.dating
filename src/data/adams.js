@@ -1,12 +1,13 @@
 import engineer from "../images/engineer.jpg";
 import cop from "../images/cop.jpeg";
-import doctor from "../images/doctor.jpeg";
+// import doctor from "../images/doctor.jpeg";
+// import dwight from "../images/dwight.jpeg";
 
 export const Adams = [
   {
     imageAlt: "Handsome man, sitting at a computer",
     imageSrc: engineer,
-    occupation: "Software Engineer"
+    occupation: "Software Engineer",
   },
   {
     imageAlt: "Handsome man, arresting somebody",
@@ -16,133 +17,153 @@ export const Adams = [
   },
   {
     imageAlt: "",
-    imageSrc: "",
-    occupation: "Rockstar",
-    matched: true
+    imageSrc: engineer,
+    occupation: "Street Fighter",
   },
   {
     imageAlt: "",
-    imageSrc: "",
-    occupation: "Basketball player",
+    imageSrc: engineer,
+    occupation: "Car Washer",
   },
   {
     imageAlt: "",
-    imageSrc: "",
-    occupation: "Stay at home son",
+    imageSrc: engineer,
+    occupation: "Pole Dancer",
   },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Stay at home father",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "CEO of a multi-billion corporation",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Actor",
-  },
-  {
-    imageAlt: "",
-    imageSrc: doctor,
-    occupation: "Doctor",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Lumberjack",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Lawyer",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Therapist",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Paramedic",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Construction Worker",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Teacher",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Pilot",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Astronaut",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "College Student",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Military",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Therapist",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Architect",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Personal Trainer",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Veterinarian",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Chef",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Photographer",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Professional Hiker",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Bartender",
-  },
-  {
-    imageAlt: "",
-    imageSrc: "",
-    occupation: "Flight Attendant",
-  },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Rockstar",
+  //   matched: true
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Basketball player",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Stay at home son",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Stay at home father",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "CEO of a multi-billion corporation",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Actor",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: doctor,
+  //   occupation: "Doctor",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Lumberjack",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Lawyer",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Therapist",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Paramedic",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Construction Worker",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Teacher",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Pilot",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Astronaut",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: dwight,
+  //   occupation: "Assistant to the Regional Manager",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "College Student",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Military",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Therapist",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Architect",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Personal Trainer",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Veterinarian",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Chef",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Photographer",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Professional Hiker",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Bartender",
+  // },
+  // {
+  //   imageAlt: "",
+  //   imageSrc: engineer,
+  //   occupation: "Flight Attendant",
+  // },
 ];
