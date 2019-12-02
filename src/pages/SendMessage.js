@@ -31,6 +31,9 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     margin: "0 auto"
   },
+  messagesContainer: {
+    padding: theme.spacing(0, 2),
+  },
   userMessage: {
     // TODO: Use https://cssgradient.io/ to find a better gradient
     background:
@@ -43,7 +46,8 @@ const useStyles = makeStyles(theme => ({
   },
   sendMessageToolbar: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    padding: theme.spacing(0, 2),
   },
   sendButton: {
     background: "none",
@@ -59,7 +63,7 @@ const useStyles = makeStyles(theme => ({
 function SendMessage() {
   const classes = useStyles();
 
-  const messages = ["Hello there"];
+  const messages = ["Adams are like atoms...", "Together we could make a molecule ;)"];
 
   const sendMessage = () => {
     console.log("Button clicked!");
@@ -100,7 +104,7 @@ function SendMessage() {
         <Grid item xs={12} lg={6} justify={"center"}>
           {messages.map(i => {
             return (
-              <div key={i}>
+              <div key={i} className={classes.messagesContainer}>
                 <p className={classes.userMessage}>{i}</p>
               </div>
             );

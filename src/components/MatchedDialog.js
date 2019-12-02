@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, makeStyles } from "@material-ui/core/";
+import React, { useState } from "react";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, makeStyles, Grow } from "@material-ui/core/";
 import { Favorite, Close } from "@material-ui/icons";
 import { green, grey, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
@@ -15,15 +15,11 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     // boxShadow: `0 0 10px ${grey[500]}`,
-    minHeight: "400px",
     marginTop: theme.spacing(1),
     position: "absolute",
     cursor: "pointer",
     textAlign: "center",
     borderRadius: theme.spacing(2),
-    left: 0,
-    right: 0,
-    margin: "0 auto",
     maxWidth: "400px",
     background: "#fff",
     userSelect: "none",
@@ -104,6 +100,7 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     textDecoration: "none",
     padding: theme.spacing(2),
+    display: "block",
     width: "100%",
     marginBottom: theme.spacing(1),
     display: "block",
@@ -139,45 +136,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function SignUpForm() {
+function matchedDialog() {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
-
-  const swipeRight = (index) => {
-    console.log(index);
-    Adams[index].matched = true;
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
   };
 
-  const swipeLeft = () => {
-    // TODO: Sometimes this returns undefined
-    alert(rejectedMessages[Math.round(Math.random() * rejectedMessages.length)]);
-  };
-
-  const renderCards = Adams.map((obj, index) => {
-    return obj.matched ? null : (
-      <div className={classes.card} key={index}>
-        <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
-        <button
-          className={`${classes.button} ${classes.swipeLeft}`}
-          onClick={swipeLeft}
-        >
-          <Close />
-        </button>
-        <button
-          className={`${classes.button} ${classes.swipeRight}`}
-          onClick={() => swipeRight(index)}
-        >
-          <Favorite />
-        </button>
-        <h3 className={classes.cardName}>Adam Ginther</h3>
-        <p className={classes.cardOccupation}>{obj.occupation}</p>
-
+    return(
         <Dialog
           open={open}
           keepMounted
@@ -205,11 +173,7 @@ function SignUpForm() {
           </Button>
           </DialogActions>
         </Dialog>
-      </div>
-    );
-  });
-
-  return <div className={classes.container}>{renderCards}</div>;
+  );
 }
 
-export default SignUpForm;
+export default matchedDialog;

@@ -1,56 +1,60 @@
 import engineer from "../images/engineer.jpg";
-import cop from "../images/cop.jpeg";
-// import doctor from "../images/doctor.jpeg";
-// import dwight from "../images/dwight.jpeg";
+
+import assistantRegionalManager from "../images/occupations/assistant-regional-manager.jpg";
+import bartender from "../images/occupations/bartender.jpg";
+import basketballPlayer from "../images/occupations/basketball-player.jpg";
+import cop from "../images/occupations/cop.jpg";
+import lumberjack from "../images/occupations/lumberjack.jpg";
+import mobBoss from "../images/occupations/mob-boss.jpg";
+import rockstar from "../images/occupations/rockstar.jpg";
+import streetFighter from "../images/occupations/street-fighter.jpg";
 
 export const Adams = [
   {
-    imageAlt: "Handsome man, sitting at a computer",
+    imageAlt: "Handsome man, sitting at a computer.",
     imageSrc: engineer,
     occupation: "Software Engineer",
   },
   {
-    imageAlt: "Handsome man, arresting somebody",
+    imageAlt: "Handsome assistant to the regional manager of Dunder Mifflin Paper Company.",
+    imageSrc: assistantRegionalManager,
+    occupation: "Assistant to the Regional Manager",
+  },
+  {
+    imageAlt: "Handsome man, serving liquor.",
+    imageSrc: bartender,
+    occupation: "Bartender",
+  },
+  {
+    imageAlt: "Handsome man, playing basketball.",
+    imageSrc: basketballPlayer,
+    occupation: "Basketball Player",
+  },
+  {
+    imageAlt: "A handsome lumberjack.",
+    imageSrc: lumberjack,
+    occupation: "Lumberjack",
+  },
+  {
+    imageAlt: "A handsome mob boss.",
+    imageSrc: mobBoss,
+    occupation: "Mob Boss",
+  },
+  {
+    imageAlt: "Handsome cop, arresting someone.",
     imageSrc: cop,
     occupation: "Police Officer",
-    matched: true,
   },
   {
-    imageAlt: "",
-    imageSrc: engineer,
+    imageAlt: "A handsome rockstar.",
+    imageSrc: rockstar,
+    occupation: "Rockstar",
+  },
+  {
+    imageAlt: "A handsome street fighter kicking some ass.",
+    imageSrc: streetFighter,
     occupation: "Street Fighter",
   },
-  {
-    imageAlt: "",
-    imageSrc: engineer,
-    occupation: "Car Washer",
-  },
-  {
-    imageAlt: "",
-    imageSrc: engineer,
-    occupation: "Pole Dancer",
-  },
-  // {
-  //   imageAlt: "",
-  //   imageSrc: engineer,
-  //   occupation: "Rockstar",
-  //   matched: true
-  // },
-  // {
-  //   imageAlt: "",
-  //   imageSrc: engineer,
-  //   occupation: "Basketball player",
-  // },
-  // {
-  //   imageAlt: "",
-  //   imageSrc: engineer,
-  //   occupation: "Stay at home son",
-  // },
-  // {
-  //   imageAlt: "",
-  //   imageSrc: engineer,
-  //   occupation: "Stay at home father",
-  // },
   // {
   //   imageAlt: "",
   //   imageSrc: engineer,

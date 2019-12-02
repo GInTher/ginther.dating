@@ -3,12 +3,10 @@ import {
   Grid,
   makeStyles,
 } from "@material-ui/core/";
-import aliyah from "../images/aliyah.jpg";
-import cop from "../images/cop.jpeg";
-import doctor from "../images/doctor.jpeg";
-import woman from "../images/woman.jpeg";
+import fiance from "../images/home/fiance.jpg";
+import mom from "../images/home/mom.jpg";
+import woman from "../images/home/shrugging-woman.jpg";
 import { pink } from "@material-ui/core/colors";
-import lumberjack from "../images/lumberjack.jpeg";
 import SignUpForm from "../components/SignUpForm";
 
 const useStyles = makeStyles(theme => ({
@@ -41,7 +39,7 @@ function Home() {
           you.
         </h1>
         <p className={classes.subHeader}>
-          With tens of users all over the world, Adam Ginther Exposed gives you
+          With tens of users all over the world, Ginther.singles gives you
           the ability to connect with Adam Ginther. No matter where you are{" "}
           <span role="img" aria-label={"winking emoji"}>
             😉
@@ -58,7 +56,7 @@ function Home() {
         </h1>
         <p>
           We looked at popular, modern dating apps and we knew something was
-          ready for a change. So we here at Adam Ginther exposed reverse
+          ready for a change. So we here at Ginther.singles reverse
           engineered the swipe: Using our very complex algorithms, we only give
           you your very best options.
         </p>
@@ -73,53 +71,29 @@ function Home() {
         </Grid>
         <Grid item sm={4}>
           <img
-            src={aliyah}
-            alt={"Women being proposed to."}
+            src={fiance}
+            alt={"Women being proposed to by a handsome man."}
             className={classes.image}
           />
           <p>
             "He's such a great guy, I would 100% recommend him to every girl. He
             is amazing."
           </p>
-          <h6>Aliyah Profsplop, Adam's ex-fiance from 4 years ago</h6>
+          <h6>- Aliyah Profsplop, Adam's ex-fiance from 4 years ago</h6>
+        </Grid>
+        <Grid item sm={4}>
+        <img
+            src={mom}
+            alt={"A handsome man and his mom."}
+            className={classes.image}
+          />
+          <p>He's my favourite (but also my only) son.</p>
+          <h6>- Adam's mom</h6>
         </Grid>
         <Grid item sm={4}>
           <img src={woman} alt={"Girl shrugging"} className={classes.image} />
           <p>"He was alright I guess"</p>
           <h6>- Adam's friend from grade 2</h6>
-        </Grid>
-        <Grid item sm={4}>
-          <p>Some other quote here</p>
-          <h6>- X</h6>
-        </Grid>
-      </Grid>
-      <Grid container xs={8} align={"center"}>
-        <Grid item xs={12}>
-          <h1>
-            With people as successful as this
-            <br /> How could you ever say no?
-          </h1>
-        </Grid>
-        <Grid item sm={4}>
-          <img
-            src={lumberjack}
-            alt={"A lumberjack"}
-            className={classes.image}
-          />
-          <h4>Lumberjack</h4>
-          <p>A man known how to handle his wood well.</p>
-        </Grid>
-        <Grid item sm={4}>
-          <img src={cop} alt={"A cop"} className={classes.image} />
-          <h4>Police Officer</h4>
-          <p>
-            Will save you from being robbed AND arrest you, if you're lucky.
-          </p>
-        </Grid>
-        <Grid item sm={4}>
-          <img src={doctor} alt={"A doctor"} className={classes.image} />
-          <h4>Doctor</h4>
-          <p>Will have no problem mending your broken heart.</p>
         </Grid>
       </Grid>
 

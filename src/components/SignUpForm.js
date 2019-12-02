@@ -10,7 +10,6 @@ import {
   makeStyles,
   TextField
 } from "@material-ui/core/";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -21,7 +20,16 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(3)
   },
   getStartedButton: {
-    marginBottom: theme.spacing(1)
+    color: "#fff",
+    textDecoration: "none",
+    padding: theme.spacing(1),
+    width: "100%",
+    marginBottom: theme.spacing(1),
+    display: "block",
+    textAlign: "center",
+    background:
+      "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)",
+    borderRadius: theme.spacing(1),
   }
 }));
 
@@ -77,7 +85,7 @@ function SignUpForm() {
         color={"primary"}
         className={classes.getStartedButton}
       >
-        <Link to={"/swipe"}>Start Swiping</Link>
+       Start Swiping
       </Button>
     </Paper>
   );
