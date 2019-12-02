@@ -99,7 +99,7 @@ function Home() {
 
       <Grid item sm={8} align="center">
         <h1>
-          Have the right conversations with the <span className={classes.highlightedText}>right people.</span>
+          Have the right conversations with the <span className={classes.highlightedText}>right person.</span>
         </h1>
       </Grid>
 

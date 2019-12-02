@@ -1,15 +1,13 @@
 import React from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, makeStyles } from "@material-ui/core/";
+import { makeStyles } from "@material-ui/core/";
+import MatchedDialog from "./MatchedDialog";
 import { Favorite, Close } from "@material-ui/icons";
 import { green, grey, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
-import { Link } from "react-router-dom";
-
-import { ReactComponent as Burst } from '../images/ui/burst.svg';
-import { ReactComponent as MatchBanner } from '../images/match-banner.svg';
 
 const useStyles = makeStyles(theme => ({
+  // TODO: Backdrop is so dark because of all the modals being overlayed on top of each other
   container: {
     position: "relative",
   },
@@ -48,10 +46,10 @@ const useStyles = makeStyles(theme => ({
       backround: "#ddd",
     }
   },
-  cardName: {
+  name: {
     marginBottom: 0,
   },
-  cardOccupation: {
+  occupation: {
     margin: theme.spacing(1, 0, 3),
   },
   image: {
@@ -65,56 +63,6 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     top: 0,
     width: "100%",
-  },
-  matchedImage: {
-    display: "block",
-    maxWidth: "200px",
-    margin: "0 auto",
-    borderRadius: "50%",
-    border: "3px solid #fff",
-    position: "relative",
-    zIndex: 1,
-  },
-  matchBanner: {
-    transform: "translateY(-50px)",
-    position: "relative",
-    zIndex: 2,
-    display: "block",
-    margin: "0 auto",
-  },
-  matchedOccupation: {
-    textAlign: "center",
-    margin: 0,
-  },
-  matchedName: {
-    textAlign: "center",
-    margin: 0,
-    color: "#000",
-  },
-  gradientBackground: {
-    background: "linear-gradient(16deg, rgba(251,110,63,1) 0%, rgba(255,70,226,1) 100%)",
-    width: "100%",
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    height: "44%",
-  },
-  sendMessage: {
-    color: "#fff",
-    textDecoration: "none",
-    padding: theme.spacing(2),
-    width: "100%",
-    marginBottom: theme.spacing(1),
-    display: "block",
-    textAlign: "center",
-    background:
-      "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)",
-    borderRadius: theme.spacing(1),
-  },
-  dialogActions: {
-    flexDirection: "column",
-    padding: theme.spacing(2, 4),
   },
   button: {
     background: "#fff",
@@ -136,7 +84,7 @@ const useStyles = makeStyles(theme => ({
     "& svg": {
       fill: "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)",
     }
-  }
+  },
 }));
 
 function SignUpForm() {
@@ -145,13 +93,8 @@ function SignUpForm() {
   const [open, setOpen] = React.useState(false);
 
   const swipeRight = (index) => {
-    console.log(index);
     Adams[index].matched = true;
     setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
   };
 
   const swipeLeft = () => {
@@ -160,7 +103,7 @@ function SignUpForm() {
   };
 
   const renderCards = Adams.map((obj, index) => {
-    return obj.matched ? null : (
+    return obj.matched ? <MatchedDialog imageSrc={obj.imageSrc} imageAlt={obj.imageAlt} occupation={obj.occupation} open={open} /> : (
       <div className={classes.card} key={index}>
         <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
         <button
@@ -175,36 +118,8 @@ function SignUpForm() {
         >
           <Favorite />
         </button>
-        <h3 className={classes.cardName}>Adam Ginther</h3>
-        <p className={classes.cardOccupation}>{obj.occupation}</p>
-
-        <Dialog
-          open={open}
-          keepMounted
-          aria-labelledby="alert-dialog-slide-title"
-          aria-describedby="alert-dialog-slide-description"
-          maxWidth={100}
-        >
-          <DialogContent>
-            <div className={classes.gradientBackground} />
-            <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.matchedImage} />
-            <Burst className={classes.burst} />
-            <MatchBanner className={classes.matchBanner} />
-
-            <DialogContentText>
-              <h3 className={classes.matchedName}>Adam Ginther</h3>
-              <p className={classes.matchedOccupation}>{obj.occupation}</p>
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions className={classes.dialogActions}>
-            <Link to="/send-message" className={classes.sendMessage}>
-              Send a message
-          </Link>
-            <Button onClick={handleClose} color="primary" fullWidth>
-              Keep Swiping
-          </Button>
-          </DialogActions>
-        </Dialog>
+        <h3 className={classes.name}>Adam Ginther</h3>
+        <p className={classes.occupation}>{obj.occupation}</p>
       </div>
     );
   });

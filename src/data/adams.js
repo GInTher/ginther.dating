@@ -1,5 +1,5 @@
-import engineer from "../images/engineer.jpg";
-
+// TODO: Find a better way to organize these images
+import engineer from "../images/occupations/engineer.jpg";
 import assistantRegionalManager from "../images/occupations/assistant-regional-manager.jpg";
 import bartender from "../images/occupations/bartender.jpg";
 import basketballPlayer from "../images/occupations/basketball-player.jpg";

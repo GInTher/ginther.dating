@@ -51,7 +51,6 @@ function SignUpForm() {
       >
         I am a:
         <FormControl>
-          <InputLabel id="demo-simple-select-label">Gender</InputLabel>
           <Select labelId="demo-simple-select-label">
             <MenuItem value={"woman"}>Woman</MenuItem>
             <MenuItem value={"man"}>Man</MenuItem>

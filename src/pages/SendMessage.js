@@ -13,7 +13,7 @@ import Send from "@material-ui/icons/Send";
 import { Link } from "react-router-dom";
 // import Navigation from "../components/Navigation";
 import { pink } from "@material-ui/core/colors";
-import engineer from "../images/engineer.jpg";
+import engineer from "../images/occupations/engineer.jpg";
 
 const useStyles = makeStyles(theme => ({
   backLink: {
@@ -41,13 +41,18 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     display: "inline-block",
     padding: theme.spacing(2),
+    marginTop: theme.spacing(3),
     marginBottom: 0,
-    borderRadius: theme.spacing(1)
+    borderRadius: theme.spacing(1),
   },
   sendMessageToolbar: {
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 2),
+    position: "fixed",
+    left: 0,
+    right: 0,
+    bottom: theme.spacing(1),
   },
   sendButton: {
     background: "none",
@@ -56,18 +61,18 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(2)
   },
   sendIcon: {
-    fontSize: "36px"
+    fontSize: "36px",
   }
 }));
 
 function SendMessage() {
   const classes = useStyles();
 
-  const messages = ["Adams are like atoms...", "Together we could make a molecule ;)"];
+  const [messages, setMessages] = React.useState([]);
+  const [typedMessage, setTypedMessage] = React.useState("");
 
-  const sendMessage = () => {
-    console.log("Button clicked!");
-    messages.push("Hello...");
+  const handleSubmit = () => {
+    typedMessage !== "" && setMessages([...messages, typedMessage]);
   };
 
   return (
@@ -123,9 +128,10 @@ function SendMessage() {
               margin="normal"
               variant="outlined"
               fullWidth
+              onChange={e => setTypedMessage(e.target.value)}
             />
-            <button className={classes.sendButton} onClick={sendMessage}>
-              <Send color="primary" className={classes.sendIcon} />
+            <button className={classes.sendButton} onClick={handleSubmit}>
+              <Send color={typedMessage && "primary"} className={classes.sendIcon} />
             </button>
           </div>
         </Grid>

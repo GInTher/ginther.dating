@@ -28,7 +28,7 @@ function Swipe() {
       <Grid container spacing={3} justify={"center"}>
         <Grid item xs={12} lg={5} xl={8}>
           
-            <h1 className={classes.pageTitle}>Get Swiping</h1>
+            <h1 className={classes.pageTitle}>Start Swiping</h1>
             <Card />
         </Grid>
       </Grid>
