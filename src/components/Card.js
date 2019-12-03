@@ -90,11 +90,12 @@ const useStyles = makeStyles(theme => ({
 function SignUpForm() {
   const classes = useStyles();
 
-  const [open, setOpen] = React.useState(false);
+  // TODO: How do you reference current object instead of false?
+  const [matched, setMatched] = React.useState(false);
 
   const swipeRight = (index) => {
     Adams[index].matched = true;
-    setOpen(true);
+    setMatched(true);
   };
 
   const swipeLeft = () => {
@@ -103,7 +104,7 @@ function SignUpForm() {
   };
 
   const renderCards = Adams.map((obj, index) => {
-    return obj.matched ? <MatchedDialog imageSrc={obj.imageSrc} imageAlt={obj.imageAlt} occupation={obj.occupation} open={open} /> : (
+    return obj.matched ? <MatchedDialog imageSrc={obj.imageSrc} imageAlt={obj.imageAlt} occupation={obj.occupation} matched={matched} /> : (
       <div className={classes.card} key={index}>
         <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
         <button

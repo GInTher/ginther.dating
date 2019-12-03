@@ -4,8 +4,10 @@ import assistantRegionalManager from "../images/occupations/assistant-regional-m
 import bartender from "../images/occupations/bartender.jpg";
 import basketballPlayer from "../images/occupations/basketball-player.jpg";
 import cop from "../images/occupations/cop.jpg";
+import cowboy from "../images/occupations/cowboy.jpg";
 import lumberjack from "../images/occupations/lumberjack.jpg";
 import mobBoss from "../images/occupations/mob-boss.jpg";
+import ninja from "../images/occupations/ninja.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
 import streetFighter from "../images/occupations/street-fighter.jpg";
 
@@ -26,6 +28,11 @@ export const Adams = [
     occupation: "Bartender",
   },
   {
+    imageAlt: "Handsome cowboy, about to lassoo you.",
+    imageSrc: cowboy,
+    occupation: "Cowboy",
+  },
+  {
     imageAlt: "Handsome man, playing basketball.",
     imageSrc: basketballPlayer,
     occupation: "Basketball Player",
@@ -39,6 +46,11 @@ export const Adams = [
     imageAlt: "A handsome mob boss.",
     imageSrc: mobBoss,
     occupation: "Mob Boss",
+  },
+  {
+    imageAlt: "Handsome ninja, with a sword.",
+    imageSrc: ninja,
+    occupation: "Ninja",
   },
   {
     imageAlt: "Handsome cop, arresting someone.",

@@ -70,13 +70,19 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function MatchedDialog(props) {
   const classes = useStyles();
+
+  const [open, setOpen] = React.useState(props.matched);
+
+  const closeDialog = () => {
+    setOpen(false);
+  };
   
   return (
     <Dialog
       aria-labelledby="alert-dialog-slide-title"
       aria-describedby="alert-dialog-slide-description"
       maxWidth={100}
-      open={props.open}
+      open={open}
       TransitionComponent={Transition}
     >
       <DialogContent>
@@ -91,10 +97,10 @@ function MatchedDialog(props) {
         </DialogContentText>
       </DialogContent>
       <DialogActions className={classes.dialogActions}>
-        <Link to="/send-message" className={classes.sendMessage}>
+        <Link to="/send-message" className={classes.sendMessage} onClick={closeDialog}>
           Send a message
           </Link>
-        <Button color="primary" fullWidth>
+        <Button color="primary" fullWidth onClick={closeDialog}>
           Keep Swiping
           </Button>
       </DialogActions>
