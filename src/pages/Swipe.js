@@ -1,12 +1,11 @@
 import React from "react";
 import Card from "../components/Card";
+import { Helmet } from "react-helmet";
 import { Grid, makeStyles } from "@material-ui/core/";
 import Navigation from "../components/Navigation";
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    
-  },
+  container: {},
   pageContainer: {
     padding: theme.spacing(2, 2, 0),
     background:
@@ -16,25 +15,35 @@ const useStyles = makeStyles(theme => ({
   pageTitle: {
     color: "#fff",
     textAlign: "center",
-  },
+    textShadow: "0 0 2px #666"
+  }
 }));
 
 function Swipe() {
   const classes = useStyles();
 
   return (
-    <div className={classes.pageContainer}>
-    <div className={classes.container}>
-      <Grid container spacing={3} justify={"center"}>
-        <Grid item xs={12} lg={5} xl={8}>
-          
-            <h1 className={classes.pageTitle}>Start Swiping</h1>
-            <Card />
-        </Grid>
-      </Grid>
-      <Navigation />
-    </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Ginther | Swipe Right</title>
+      </Helmet>
+      <div className={classes.pageContainer}>
+        <div className={classes.container}>
+          <Grid container spacing={3} justify={"center"}>
+            <Grid item xs={12} lg={5} xl={8}>
+              <h1 className={classes.pageTitle}>
+                Swipe Right{" "}
+                <span role="img" aria-label="Winking face">
+                  😉
+                </span>
+              </h1>
+              <Card />
+            </Grid>
+          </Grid>
+          <Navigation />
+        </div>
+      </div>
+    </>
   );
 }
 

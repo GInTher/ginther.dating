@@ -84,6 +84,7 @@ function MatchedDialog(props) {
       maxWidth={100}
       open={open}
       TransitionComponent={Transition}
+      onBackdropClick={closeDialog}
     >
       <DialogContent>
         <div className={classes.gradientBackground} />

@@ -22,13 +22,16 @@ function Navigation() {
     <Paper square className={classes.container}>
       <Tabs
         variant="fullWidth"
-        indicatorColor="primary"
+        indicatorColor="secondary"
         textColor="primary"
         aria-label="icon tabs example"
         centered
       >
         <Link to={"/swipe"} component={GeneratedLink}><Tab icon={<People />} aria-label="Swipe" /></Link>
         <Link to={"/messages"} component={GeneratedLink}><Tab icon={<Message />} aria-label="Messages" /></Link>
+
+        {/* <Tab label={<Link to={"/swipe"} component={GeneratedLink}><Tab icon={<People />} aria-label="Swipe" /></Link>}></Tab>
+        <Tab label={<Link to={"/message"} component={GeneratedLink}><Tab icon={<Message />} aria-label="Messages" /></Link>}></Tab> */}
       </Tabs>
     </Paper>
   );

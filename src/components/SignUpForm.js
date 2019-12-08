@@ -1,37 +1,58 @@
 import React from "react";
 import {
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Paper,
+  Link,
+  Button,
   RadioGroup,
   Select,
   makeStyles,
   TextField
 } from "@material-ui/core/";
+import { Link as RouterLink } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    marginTop: theme.spacing(6),
+    marginTop: isMobile ? 0 : theme.spacing(6),
     padding: theme.spacing(3, 2)
   },
   formSpacing: {
     marginBottom: theme.spacing(3)
   },
+  getStartedLink: {
+    color: "#fff",
+    display: "inline-block",
+    padding: theme.spacing(1),
+    width: "100%",
+
+    "&:hover": {
+      textDecoration: "none",
+    },
+
+    "&:focus": {
+      textDecoration: "none",
+    }
+  },
   getStartedButton: {
     color: "#fff",
     textDecoration: "none",
-    padding: theme.spacing(1),
     width: "100%",
     marginBottom: theme.spacing(1),
     display: "block",
     textAlign: "center",
+    padding: 0,
     background:
       "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)",
-    borderRadius: theme.spacing(1),
+    borderRadius: theme.spacing(1)
   }
 }));
+
+const GeneratedLink = React.forwardRef((props, ref) => (
+  <RouterLink innerRef={ref} {...props} />
+));
 
 function SignUpForm() {
   const classes = useStyles();
@@ -78,13 +99,14 @@ function SignUpForm() {
           </Select>
         </FormControl>
       </RadioGroup>
-      <Button
-        fullWidth
-        variant={"contained"}
-        color={"primary"}
-        className={classes.getStartedButton}
-      >
-       Start Swiping
+      <Button className={classes.getStartedButton}>
+        <Link
+          to={"/swipe"}
+          component={GeneratedLink}
+          className={classes.getStartedLink}
+        >
+          Start Swiping
+        </Link>
       </Button>
     </Paper>
   );

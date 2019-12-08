@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   Grid,
   List,
@@ -15,27 +16,26 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   pageTitle: {
-    margin: theme.spacing(4, 2, 2),
+    margin: theme.spacing(4, 2, 2)
   },
   avatar: {
     height: theme.spacing(10),
     width: theme.spacing(10),
-    marginRight: theme.spacing(3),
+    marginRight: theme.spacing(3)
   },
   name: {
-    fontSize: "20px",
-    marginBottom: theme.spacing(0.5),
+    fontSize: "20px"
   },
   messageContainer: {
     width: "100%",
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper
   },
   inline: {
     display: "inline"
   },
   link: {
     textDecoration: "none",
-    color: "inherit",
+    color: "inherit"
   }
 }));
 
@@ -44,6 +44,9 @@ function Messages() {
 
   return (
     <>
+      <Helmet>
+        <title>Ginther | Messages</title>
+      </Helmet>
       <Grid container spacing={3} justify={"center"}>
         <Grid item xs={12} lg={6} justify={"center"}>
           <h1 className={classes.pageTitle}>Messages</h1>
@@ -52,16 +55,22 @@ function Messages() {
             {Adams.map(i => {
               return i.matched ? (
                 <>
-                <Link to="/send-message" className={classes.link}>
-                  <ListItem>
-                    <ListItemAvatar>
-                        <Avatar alt="A very handsome man" src={i.imageSrc} className={classes.avatar} />
-                    </ListItemAvatar>
-                    <ListItemText
-                      primary={<div className={classes.name}>Adam Ginther</div>}
-                      secondary={<div>{i.occupation}</div>}
-                    />
-                  </ListItem>
+                  <Link to="/send-message" className={classes.link}>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar
+                          alt="A very handsome man"
+                          src={i.imageSrc}
+                          className={classes.avatar}
+                        />
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <div className={classes.name}>Adam Ginther</div>
+                        }
+                        secondary={<div>{i.occupation}</div>}
+                      />
+                    </ListItem>
                   </Link>
                   <Divider component="li" />
                 </>

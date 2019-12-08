@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   AppBar,
   Toolbar,
@@ -32,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto"
   },
   messagesContainer: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, 2)
   },
   userMessage: {
     // TODO: Use https://cssgradient.io/ to find a better gradient
@@ -43,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     marginTop: theme.spacing(3),
     marginBottom: 0,
-    borderRadius: theme.spacing(1),
+    borderRadius: theme.spacing(1)
   },
   sendMessageToolbar: {
     display: "flex",
@@ -53,6 +54,8 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     right: 0,
     bottom: theme.spacing(1),
+    maxWidth: "670px",
+    margin: "0 auto",
   },
   sendButton: {
     background: "none",
@@ -62,6 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   sendIcon: {
     fontSize: "36px",
+    transition: "0.2s"
   }
 }));
 
@@ -77,6 +81,9 @@ function SendMessage() {
 
   return (
     <>
+      <Helmet>
+        <title>Ginther | Send Message</title>
+      </Helmet>
       <AppBar position="static" color="default">
         <Grid container spacing={3} justify={"center"}>
           <Grid item xs={12} lg={6} justify={"center"}>
@@ -122,16 +129,21 @@ function SendMessage() {
             <TextField
               id="outlined-textarea"
               label="Send a message"
+              autoFocus
               placeholder="I'm waiting..."
-              multiline
               className={classes.textField}
               margin="normal"
               variant="outlined"
               fullWidth
-              onChange={e => setTypedMessage(e.target.value)}
+              onChange={e => {
+                setTypedMessage(e.target.value);
+              }}
             />
             <button className={classes.sendButton} onClick={handleSubmit}>
-              <Send color={typedMessage && "primary"} className={classes.sendIcon} />
+              <Send
+                color={typedMessage && "primary"}
+                className={classes.sendIcon}
+              />
             </button>
           </div>
         </Grid>

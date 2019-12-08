@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/";
 import MatchedDialog from "./MatchedDialog";
+import useForceUpdate from 'use-force-update';
 import { Favorite, Close } from "@material-ui/icons";
 import { green, grey, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
@@ -27,7 +28,6 @@ const useStyles = makeStyles(theme => ({
     userSelect: "none",
     // TODO: Add willChange
     // willChange: 
-    transition: "0.2s opacity",
     "&:first-child": {
       zIndex: 3
     },
@@ -88,6 +88,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function SignUpForm() {
+  const forceUpdate = useForceUpdate();
   const classes = useStyles();
 
   // TODO: How do you reference current object instead of false?
@@ -96,6 +97,8 @@ function SignUpForm() {
   const swipeRight = (index) => {
     Adams[index].matched = true;
     setMatched(true);
+    // TODO: Pass down props properly instead of using forceUpdate
+    forceUpdate();
   };
 
   const swipeLeft = () => {
