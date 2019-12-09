@@ -26,14 +26,16 @@ const useStyles = makeStyles(theme => ({
   },
   headingTextContainer: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    justifyContent: "center",
+    marginLeft: isMobile ? 0 : theme.spacing(4),
   },
   getStartedButton: {
-    maxWidth: "200px"
-  },
-  getStartedLink: {
-    textDecoration: "none",
-    color: "inherit"
+    maxWidth: "200px",
+    display: "block",
+    width: "100%",
+    padding: theme.spacing(1),
+    textAlign: "center",
   },
   mainHeader: {
     margin: isMobile ? theme.spacing(0, 0, 1) : theme.spacing(6, 0, 1)
@@ -54,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     border: `3px solid ${pink[500]}`,
     display: "block",
     maxWidth: "100%",
-    width: "150px"
+    width: "150px",
   },
   textAlignLeftMobile: {
     textAlign: isMobile && "left"
@@ -71,12 +73,10 @@ function Home() {
       </Helmet>
       <Grid
         container
-        spacing={3}
-        justify={"center"}
-        xs={11}
         className={classes.container}
+        justify={"center"}
       >
-        <Grid item xs={12} lg={5} xl={8} justify={"center"}>
+        <Grid item xs={11} lg={5} xl={8}>
           <img
             src={banner}
             alt={"The greatest app on the planet."}
@@ -88,7 +88,6 @@ function Home() {
           xs={12}
           lg={5}
           xl={8}
-          justify={"center"}
           className={classes.headingTextContainer}
         >
           <h1 className={classes.mainHeader}>
@@ -107,11 +106,10 @@ function Home() {
             variant={"contained"}
             color={"primary"}
             className={classes.getStartedButton}
+            component="a"
+            href="#sign-up"
           >
-            {/* TODO: User can't click anywhere in button */}
-            <a href="#sign-up" className={classes.getStartedLink}>
               Get started
-            </a>
           </Button>
         </Grid>
         <Grid item sm={8} align={"center"}>
@@ -128,7 +126,7 @@ function Home() {
             </p>
           </div>
         </Grid>
-        <Grid container sm={8} align={"center"}>
+        <Grid container align={"center"}>
           <Grid item xs={12}>
             <h1 className={classes.testimonialHeader}>
               Over <span className={classes.highlightedText}>3 women</span>{" "}
@@ -168,7 +166,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} lg={5} xl={6} justify={"center"}>
+        <Grid item xs={12} lg={5} xl={6}>
           <div className={classes.section}>
             <h1 className={classes.mainHeader}>
               Well, what are you waiting for?
@@ -180,7 +178,7 @@ function Home() {
           </div>
         </Grid>
 
-        <Grid item xs={12} lg={5} xl={6} justify={"center"} id={"sign-up"}>
+        <Grid item xs={12} lg={5} xl={6} id={"sign-up"}>
           <SignUpForm />
         </Grid>
       </Grid>

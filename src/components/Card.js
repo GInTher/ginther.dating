@@ -1,16 +1,17 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/";
 import MatchedDialog from "./MatchedDialog";
-import useForceUpdate from 'use-force-update';
+import useForceUpdate from "use-force-update";
 import { Favorite, Close } from "@material-ui/icons";
 import { green, grey, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   // TODO: Backdrop is so dark because of all the modals being overlayed on top of each other
   container: {
-    position: "relative",
+    position: "relative"
   },
   card: {
     // boxShadow: `0 0 10px ${grey[500]}`,
@@ -27,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     background: "#fff",
     userSelect: "none",
     // TODO: Add willChange
-    // willChange: 
+    // willChange:
     "&:first-child": {
       zIndex: 3
     },
@@ -36,21 +37,21 @@ const useStyles = makeStyles(theme => ({
       zIndex: 2,
       opacity: 0.9,
       transform: "scale(0.95)",
-      background: "#eee",
+      background: "#eee"
     },
     "&:nth-child(3)": {
       top: theme.spacing(6),
       zIndex: 1,
       opacity: 0.5,
       transform: "scale(0.89)",
-      backround: "#ddd",
+      backround: "#ddd"
     }
   },
   name: {
-    marginBottom: 0,
+    marginBottom: 0
   },
   occupation: {
-    margin: theme.spacing(1, 0, 3),
+    margin: theme.spacing(1, 0, 3)
   },
   image: {
     borderRadius: theme.spacing(2, 2, 0, 0),
@@ -62,7 +63,7 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     position: "absolute",
     top: 0,
-    width: "100%",
+    width: "100%"
   },
   button: {
     background: "#fff",
@@ -71,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     cursor: "pointer",
     borderRadius: "50%",
-    boxShadow: `0 0 4px ${grey[500]}`,
+    boxShadow: `0 0 4px ${grey[400]}`,
     transform: "translateY(-50%)"
   },
   swipeLeft: {
@@ -82,9 +83,25 @@ const useStyles = makeStyles(theme => ({
     right: theme.spacing(4),
     color: green[400],
     "& svg": {
-      fill: "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)",
+      fill:
+        "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)"
     }
   },
+  rotateRight: {
+    transform: "rotate(-30deg) scale(0.8)",
+    transition: "1s",
+    opacity: 0,
+    cursor: "w-resize",
+    zIndex: 10
+  },
+  completeContainer: {
+    color: "#fff",
+  },
+  link: {
+    color: "#fff",
+    fontWeight: 800,
+    textDecoration: "none",
+  }
 }));
 
 function SignUpForm() {
@@ -94,7 +111,7 @@ function SignUpForm() {
   // TODO: How do you reference current object instead of false?
   const [matched, setMatched] = React.useState(false);
 
-  const swipeRight = (index) => {
+  const swipeRight = index => {
     Adams[index].matched = true;
     setMatched(true);
     // TODO: Pass down props properly instead of using forceUpdate
@@ -103,12 +120,31 @@ function SignUpForm() {
 
   const swipeLeft = () => {
     // TODO: Sometimes this returns undefined
-    alert(rejectedMessages[Math.round(Math.random() * rejectedMessages.length)]);
+    alert(
+      rejectedMessages[Math.round(Math.random() * rejectedMessages.length)]
+    );
+  };
+
+  // https://www.kirupa.com/html5/detecting_touch_swipe_gestures.htm
+  const triggerSwipeAnimation = e => {
+    alert("Swiped right");
+    return true;
   };
 
   const renderCards = Adams.map((obj, index) => {
-    return obj.matched ? <MatchedDialog imageSrc={obj.imageSrc} imageAlt={obj.imageAlt} occupation={obj.occupation} matched={matched} /> : (
-      <div className={classes.card} key={index}>
+    return obj.matched ? (
+      <MatchedDialog
+        imageSrc={obj.imageSrc}
+        imageAlt={obj.imageAlt}
+        occupation={obj.occupation}
+        matched={matched}
+      />
+    ) : (
+      <div
+        className={`${classes.card}`}
+        key={index}
+        onTouchMove={e => triggerSwipeAnimation(e)}
+      >
         <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
         <button
           className={`${classes.button} ${classes.swipeLeft}`}
@@ -128,7 +164,30 @@ function SignUpForm() {
     );
   });
 
-  return <div className={classes.container}>{renderCards}</div>;
+  const renderCompleteMessage = (
+    <div className={classes.completeContainer}>
+      <h3>Okay... you may have swiped right a little bit too much.</h3>
+      <p>
+        And that's totally okay. I probably would have swiped right just as
+        much. So why don't you just get on with it and{" "}
+        <Link to={"messages"} className={classes.link}>
+          start messaging me?{" "}
+        </Link>
+        <span role="img" aria-label="winking face">
+            😉
+          </span>
+      </p>
+    </div>
+  );
+
+  return (
+    <div className={classes.container}>
+      {console.log(Adams[Adams.length - 1].matched !== undefined ? true : false)}
+      {Adams[Adams.length - 1].matched !== undefined
+        ? renderCompleteMessage
+        : renderCards}
+    </div>
+  );
 }
 
 export default SignUpForm;

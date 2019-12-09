@@ -17,10 +17,14 @@ import { isMobile } from "react-device-detect";
 const useStyles = makeStyles(theme => ({
   container: {
     marginTop: isMobile ? 0 : theme.spacing(6),
-    padding: theme.spacing(3, 2)
+    padding: theme.spacing(3, 2),
+    marginBottom: theme.spacing(3),
   },
   formSpacing: {
     marginBottom: theme.spacing(3)
+  },
+  name: {
+    width: "100%",
   },
   getStartedLink: {
     color: "#fff",
@@ -62,8 +66,7 @@ function SignUpForm() {
       <TextField
         id="standard-basic"
         label="My name is"
-        className={classes.formSpacing}
-        fullWidth
+        className={`${classes.name} ${classes.formSpacing}`}
       />
       <RadioGroup
         aria-label="gender"
@@ -84,13 +87,6 @@ function SignUpForm() {
         name="gender"
         className={classes.formSpacing}
       >
-        {/*
-            In search of:
-            <FormControlLabel
-              value="male"
-              control={<Radio checked={true} />}
-              label="Adam Ginther"
-            /> */}
         <FormControl>
           <InputLabel id="demo-simple-select-label">In Search of</InputLabel>
           <Select labelId="demo-simple-select-label">
