@@ -101,6 +101,10 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     fontWeight: 800,
     textDecoration: "none",
+
+    "&:hover": {
+      textDecoration: "underline",
+    }
   }
 }));
 
@@ -125,12 +129,6 @@ function SignUpForm() {
     );
   };
 
-  // https://www.kirupa.com/html5/detecting_touch_swipe_gestures.htm
-  const triggerSwipeAnimation = e => {
-    alert("Swiped right");
-    return true;
-  };
-
   const renderCards = Adams.map((obj, index) => {
     return obj.matched ? (
       <MatchedDialog
@@ -143,7 +141,9 @@ function SignUpForm() {
       <div
         className={`${classes.card}`}
         key={index}
-        onTouchMove={e => triggerSwipeAnimation(e)}
+        onTouchMove={() => swipeRight(index)}
+        onDragStart={() => swipeRight(index)}
+        draggable={true}
       >
         <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
         <button
@@ -170,12 +170,12 @@ function SignUpForm() {
       <p>
         And that's totally okay. I probably would have swiped right just as
         much. So why don't you just get on with it and{" "}
-        <Link to={"messages"} className={classes.link}>
+        <Link to={"/messages"} className={classes.link}>
           start messaging me?{" "}
         </Link>
-        <span role="img" aria-label="winking face">
-            😉
-          </span>
+      </p>
+      <p>
+        But also if you'd like, you can <Link className={classes.link} onClick={() => {window.location.reload(true)}}>go here to swipe all over again.</Link>
       </p>
     </div>
   );

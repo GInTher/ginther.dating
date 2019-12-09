@@ -12,9 +12,14 @@ import {
 import ArrowBackIos from "@material-ui/icons/ArrowBackIos";
 import Send from "@material-ui/icons/Send";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
+import { sendMessages } from "../data/sendMessages";
 import { pink, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles(theme => ({
+  toolbarContainer: {
+    marginBottom: theme.spacing(2),
+  },
   backLink: {
     color: pink[500]
   },
@@ -55,7 +60,7 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     display: "inline-block",
     padding: theme.spacing(2),
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(1),
     marginBottom: 0,
     borderRadius: theme.spacing(1)
   },
@@ -68,7 +73,8 @@ const useStyles = makeStyles(theme => ({
     right: 0,
     bottom: theme.spacing(1),
     maxWidth: "670px",
-    margin: "0 auto"
+    margin: "0 auto",
+    background: "#fff",
   },
   sendButton: {
     background: "none",
@@ -84,24 +90,24 @@ const useStyles = makeStyles(theme => ({
     color: grey[400],
     fontSize: "12px",
     marginTop: theme.spacing(0.5),
-    textAlign: "right"
+    textAlign: "right",
   },
   sendMessageContainer: {
     display: "flex",
-    height: "80vh",
+    height: isMobile ? "60vh" : "80vh",
     justifyContent: "center",
     flexDirection: "column",
     alignItems: "center"
   },
   sendMessageImage: {
     display: "block",
-    maxWidth: "200px",
+    maxWidth: isMobile ? theme.spacing(20) : theme.spacing(40),
     borderRadius: "50%",
     border: `3px solid ${pink[500]}`,
-    marginBottom: theme.spacing(5)
+    marginBottom: theme.spacing(2)
   },
   paragraph: {
-    margin: theme.spacing(0.5, 0),
+    margin: theme.spacing(0.5, 2),
     textAlign: "center"
   },
   textField: {
@@ -117,6 +123,7 @@ function SendMessage(props) {
 
   const handleSubmit = () => {
     typedMessage !== "" && setMessages([...messages, typedMessage]);
+    // typedMessage !== "" && setMessages([...messages, sendMessages[Math.round(Math.random() * sendMessages.length)]]);
   };
 
   function getCurrentTime(date) {
@@ -136,7 +143,7 @@ function SendMessage(props) {
         <title>Ginther | Message the {props.occupation}</title>
       </Helmet>
       {/* Weird spacing probably has to do with spacing prop in grid */}
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="default" className={classes.toolbarContainer}>
         <Grid container className={classes.gridContainer}>
           <Grid item xs={12} lg={6}>
             <Toolbar>
@@ -173,12 +180,12 @@ function SendMessage(props) {
           className={classes.contentContainer}
         >
           <div className={classes.receivedMessagesContainer}>
-            {messages.map(i => {
+            {messages.map((obj, index) => {
               return (
-                <div key={i} className={classes.messagesContainer}>
-                  <p className={classes.userMessage}>{i}</p>
+                <div key={index} className={classes.messagesContainer}>
+                  <p className={classes.userMessage}>{obj}</p>
                   <div className={classes.sentReceipt}>
-                    Sent at {getCurrentTime(new Date())}
+                    {index ===messages.length - 1 && <>Sent at {getCurrentTime(new Date())}</>}
                   </div>
                 </div>
               );
@@ -208,13 +215,14 @@ function SendMessage(props) {
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} lg={6} justify={"center"}>
-          <div className={classes.sendMessageToolbar}>
+          {/* TODO: Stop form from submitting */}
+            <form autocomplete="off" className={classes.sendMessageToolbar} onSubmit={(e) => e.preventDefault()}>
             <TextField
               id="outlined-textarea"
               label="Send a message"
               placeholder="I'm waiting..."
+              autocomplete="false"
               className={classes.textField}
-              autoComplete={false}
               margin="normal"
               variant="outlined"
               onChange={e => {
@@ -223,23 +231,24 @@ function SendMessage(props) {
               onFocus={e => {
                 document.addEventListener("keydown", event => {
                   if (event.key === "Enter") {
-                    setMessages([...messages, "Hello"]);
+                    console.log(e);
+                    setMessages([...messages, sendMessages[Math.round(Math.random() * sendMessages.length)]]);
                   }
                 });
               }}
-              // onBlur={(e) => document.removeEventListener(e, "keydown")}
             />
             <button
               className={classes.sendButton}
               onClick={handleSubmit}
               disabled={!typedMessage}
+              type="button"
             >
               <Send
                 color={typedMessage ? "primary" : "disabled"}
                 className={classes.sendIcon}
               />
             </button>
-          </div>
+            </form>
         </Grid>
       </Grid>
     </>

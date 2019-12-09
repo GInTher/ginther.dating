@@ -30,7 +30,7 @@ function Navigation(props) {
     <Paper square className={classes.container}>
       <Tabs
         centered
-        value={0}
+        value={props.currentPage === "swipe" ? 0 : 1}
       >
         <Link to={"/swipe"} component={GeneratedLink}><Tab icon={<People />} aria-label="Swipe" className={props.currentPage === "swipe" ? classes.active : classes.notActive} /></Link>
         <Link to={"/messages"} component={GeneratedLink}><Tab icon={<Message />} aria-label="Messages" className={props.currentPage === "messages" ? classes.active : classes.notActive} /></Link>
