@@ -25,7 +25,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <Switch>
           <Route exact path="/" children={<Home />} />
-          {/* <Route exact path="/swipe" children={<Swipe />} /> */}
           <Route exact path="/swipe" render={(props) => <Swipe {...props} currentPage={"swipe"} />} />
           <Route exact path="/messages" render={(props) => <Messages {...props} currentPage={"messages"} />} />
           <Route exact path="/send-message" children={<SendMessage />} />

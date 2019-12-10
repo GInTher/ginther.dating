@@ -18,7 +18,7 @@ import { pink, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles(theme => ({
   toolbarContainer: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   },
   backLink: {
     color: pink[500]
@@ -71,10 +71,10 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     left: 0,
     right: 0,
-    bottom: theme.spacing(1),
+    bottom: 0,
     maxWidth: "670px",
     margin: "0 auto",
-    background: "#fff",
+    background: "#fff"
   },
   sendButton: {
     background: "none",
@@ -90,7 +90,7 @@ const useStyles = makeStyles(theme => ({
     color: grey[400],
     fontSize: "12px",
     marginTop: theme.spacing(0.5),
-    textAlign: "right",
+    textAlign: "right"
   },
   sendMessageContainer: {
     display: "flex",
@@ -121,9 +121,11 @@ function SendMessage(props) {
   const [messages, setMessages] = React.useState([]);
   const [typedMessage, setTypedMessage] = React.useState("");
 
+  const chooseRandomMessage = Math.round(Math.random() * sendMessages.length);
+
   const handleSubmit = () => {
-    typedMessage !== "" && setMessages([...messages, typedMessage]);
-    // typedMessage !== "" && setMessages([...messages, sendMessages[Math.round(Math.random() * sendMessages.length)]]);
+    typedMessage !== "" &&
+      setMessages([...messages, sendMessages[chooseRandomMessage]]);
   };
 
   function getCurrentTime(date) {
@@ -143,7 +145,11 @@ function SendMessage(props) {
         <title>Ginther | Message the {props.occupation}</title>
       </Helmet>
       {/* Weird spacing probably has to do with spacing prop in grid */}
-      <AppBar position="static" color="default" className={classes.toolbarContainer}>
+      <AppBar
+        position="static"
+        color="default"
+        className={classes.toolbarContainer}
+      >
         <Grid container className={classes.gridContainer}>
           <Grid item xs={12} lg={6}>
             <Toolbar>
@@ -185,7 +191,9 @@ function SendMessage(props) {
                 <div key={index} className={classes.messagesContainer}>
                   <p className={classes.userMessage}>{obj}</p>
                   <div className={classes.sentReceipt}>
-                    {index ===messages.length - 1 && <>Sent at {getCurrentTime(new Date())}</>}
+                    {index === messages.length - 1 && (
+                      <>Sent at {getCurrentTime(new Date())}</>
+                    )}
                   </div>
                 </div>
               );
@@ -216,7 +224,11 @@ function SendMessage(props) {
       <Grid container spacing={3}>
         <Grid item xs={12} lg={6} justify={"center"}>
           {/* TODO: Stop form from submitting */}
-            <form autocomplete="off" className={classes.sendMessageToolbar} onSubmit={(e) => e.preventDefault()}>
+          <form
+            autocomplete="off"
+            className={classes.sendMessageToolbar}
+            onSubmit={e => e.preventDefault()}
+          >
             <TextField
               id="outlined-textarea"
               label="Send a message"
@@ -225,17 +237,17 @@ function SendMessage(props) {
               className={classes.textField}
               margin="normal"
               variant="outlined"
+              autoFocus={!isMobile}
               onChange={e => {
                 setTypedMessage(e.target.value);
               }}
-              onFocus={e => {
-                document.addEventListener("keydown", event => {
-                  if (event.key === "Enter") {
-                    console.log(e);
-                    setMessages([...messages, sendMessages[Math.round(Math.random() * sendMessages.length)]]);
-                  }
-                });
-              }}
+              onFocus={document.addEventListener("keydown", event => {
+                if (event.key === "Enter") {
+                  setMessages([...messages, sendMessages[chooseRandomMessage]]);
+                }
+
+                return;
+              })}
             />
             <button
               className={classes.sendButton}
@@ -248,7 +260,7 @@ function SendMessage(props) {
                 className={classes.sendIcon}
               />
             </button>
-            </form>
+          </form>
         </Grid>
       </Grid>
     </>

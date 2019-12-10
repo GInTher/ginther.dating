@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   testimonialHeader: {
     marginBottom: isMobile ? theme.spacing(6) : theme.spacing(4),
+    textAlign: isMobile ? "left" : undefined,
   },
   banner: {
     display: "block",
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
   },
   mainHeader: {
-    margin: isMobile ? theme.spacing(0, 0, 1) : theme.spacing(6, 0, 1)
+    margin: isMobile ? theme.spacing(3, 0, 2) : theme.spacing(6, 0, 1)
   },
   paragraph: {
     lineHeight: 1.5,
@@ -85,7 +86,7 @@ function Home() {
         </Grid>
         <Grid
           item
-          xs={12}
+          xs={11}
           lg={5}
           xl={8}
           className={classes.headingTextContainer}
@@ -112,29 +113,15 @@ function Home() {
               Get started
           </Button>
         </Grid>
-        <Grid item sm={8} align={"center"}>
-          <div className={classes.section}>
-            <h1 className={classes.textAlignLeftMobile}>
-              It all started with{" "}
-              <span className={classes.highlightedText}>Adam Ginther.</span>
-            </h1>
-            <p className={classes.textAlignLeftMobile + " " + classes.paragraph}>
-              We looked at popular, modern dating apps and we knew something was
-              ready for a change. So we here at Ginther.singles reverse
-              engineered the swipe: Using our very complex algorithms, we only
-              give you your very best options.
-            </p>
-          </div>
-        </Grid>
         <Grid container align={"center"}>
-          <Grid item xs={12}>
+          <Grid item xs={11} sm={12} align={"center"}>
             <h1 className={classes.testimonialHeader}>
               Over <span className={classes.highlightedText}>3 women</span>{" "}
               approved of{" "}
               <span className={classes.highlightedText}>Adam Ginther.</span>
             </h1>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={11} sm={4}>
             <img
               src={fiance}
               alt={"Women being proposed to by a handsome man."}
@@ -146,7 +133,7 @@ function Home() {
             </p>
             <h6>- Aliyah Profsplop, Adam's ex-fiance from 4 years ago</h6>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={11} sm={4}>
             <img
               src={mom}
               alt={"A handsome man and his mom."}
@@ -159,14 +146,14 @@ function Home() {
             </p>
             <h6>- Adam's mom</h6>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={11} sm={4}>
             <img src={woman} alt={"Girl shrugging"} className={classes.image} />
             <p>"He was alright I guess?"</p>
             <h6>- Adam's friend from grade 2</h6>
           </Grid>
         </Grid>
 
-        <Grid item xs={12} lg={5} xl={6}>
+        <Grid item xs={11} lg={5} xl={6}>
           <div className={classes.section}>
             <h1 className={classes.mainHeader}>
               Well, what are you waiting for?
@@ -178,7 +165,7 @@ function Home() {
           </div>
         </Grid>
 
-        <Grid item xs={12} lg={5} xl={6} id={"sign-up"}>
+        <Grid item xs={11} lg={5} xl={6} id={"sign-up"}>
           <SignUpForm />
         </Grid>
       </Grid>
