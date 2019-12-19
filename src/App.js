@@ -3,6 +3,7 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core/";
 import Home from "./pages/Home";
 import Swipe from "./pages/Swipe";
 import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
 import SendMessage from "./pages/SendMessage";
 import { Adams } from "./data/adams";
 import { pink } from "@material-ui/core/colors";
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/" children={<Home />} />
           <Route exact path="/swipe" render={(props) => <Swipe {...props} currentPage={"swipe"} />} />
           <Route exact path="/messages" render={(props) => <Messages {...props} currentPage={"messages"} />} />
+          <Route exact path="/profile" render={(props) => <Profile {...props} currentPage={"profile"} />} />
           <Route exact path="/send-message" children={<SendMessage />} />
           {Adams.map((obj, index) => {
             return (
