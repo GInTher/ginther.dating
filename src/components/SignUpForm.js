@@ -62,7 +62,7 @@ function SignUpForm() {
   const classes = useStyles();
 
   return (
-    <Paper elevation={3} className={classes.container}>
+    <Paper elevation={3} className={classes.container} id={"sign-up"}>
       <TextField
         id="standard-basic"
         label="My name is"

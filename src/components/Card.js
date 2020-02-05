@@ -9,7 +9,6 @@ import { rejectedMessages } from "../data/rejectedMessages";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
-  // TODO: Backdrop is so dark because of all the modals being overlayed on top of each other
   container: {
     position: "relative"
   },
@@ -27,8 +26,6 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "400px",
     background: "#fff",
     userSelect: "none",
-    // TODO: Add willChange
-    // willChange:
     "&:first-child": {
       zIndex: 3
     },
@@ -44,7 +41,7 @@ const useStyles = makeStyles(theme => ({
       zIndex: 1,
       opacity: 0.5,
       transform: "scale(0.89)",
-      backround: "#ddd"
+      background: "#ddd"
     }
   },
   name: {
@@ -57,6 +54,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(2, 2, 0, 0),
     display: "block",
     width: "100%",
+    minHeight: "200px",
     pointerEvents: "none"
   },
   burst: {
@@ -95,7 +93,7 @@ const useStyles = makeStyles(theme => ({
     zIndex: 10
   },
   completeContainer: {
-    color: "#fff",
+    color: "#fff"
   },
   link: {
     color: "#fff",
@@ -103,7 +101,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
 
     "&:hover": {
-      textDecoration: "underline",
+      textDecoration: "underline"
     }
   }
 }));
@@ -145,7 +143,12 @@ function SignUpForm() {
         onDragStart={() => swipeRight(index)}
         draggable={true}
       >
-        <img src={obj.imageSrc} alt={obj.imageAlt} className={classes.image} />
+        <img
+          src={obj.imageSrc}
+          alt={obj.imageAlt}
+          className={classes.image}
+          loading={index < 3 && "eager"}
+        />
         <button
           className={`${classes.button} ${classes.swipeLeft}`}
           onClick={swipeLeft}
@@ -175,14 +178,24 @@ function SignUpForm() {
         </Link>
       </p>
       <p>
-        But also if you'd like, you can <Link className={classes.link} onClick={() => {window.location.reload(true)}}>go here to swipe all over again.</Link>
+        But also if you'd like, you can{" "}
+        <Link
+          className={classes.link}
+          onClick={() => {
+            window.location.reload(true);
+          }}
+        >
+          go here to swipe all over again.
+        </Link>
       </p>
     </div>
   );
 
   return (
     <div className={classes.container}>
-      {console.log(Adams[Adams.length - 1].matched !== undefined ? true : false)}
+      {console.log(
+        Adams[Adams.length - 1].matched !== undefined ? true : false
+      )}
       {Adams[Adams.length - 1].matched !== undefined
         ? renderCompleteMessage
         : renderCards}

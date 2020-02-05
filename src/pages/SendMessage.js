@@ -142,7 +142,7 @@ function SendMessage(props) {
   return (
     <>
       <Helmet>
-        <title>Ginther | Message the {props.occupation}</title>
+        <title>Ginther | Message your {props.occupation}</title>
       </Helmet>
       {/* Weird spacing probably has to do with spacing prop in grid */}
       <AppBar

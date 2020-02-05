@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>icons/star</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="124.31875%" y1="-1.15196308%" x2="-15.7072917%" y2="111.924897%" id="linearGradient-1">
+            <stop stop-color="#00CA9D" offset="0%"></stop>
+            <stop stop-color="#AEEFAA" offset="68.6742666%"></stop>
+            <stop stop-color="#FBFFC1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buttons/like" transform="translate(-14.000000, -16.000000)">
+            <g id="Superlike">
+                <g id="icons/like" transform="translate(11.000000, 11.000000)">
+                    <rect id="Rectangle" fill-opacity="0" fill="#FF0000" x="0" y="0" width="38" height="38"></rect>
+                    <g id="color/Green" fill="url(#linearGradient-1)">
+                        <rect x="0" y="0" width="38" height="38"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

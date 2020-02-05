@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Button,
+  // Button,
   IconButton,
   makeStyles,
   Paper,
@@ -74,7 +74,8 @@ const useStyles = makeStyles(theme => ({
 function Profile(props) {
   const classes = useStyles();
 
-  const [photo, setPhoto] = React.useState("");
+  // const [photo, setPhoto] = React.useState("");
+  const [photo] = React.useState("");
 
   return (
     <>
@@ -87,7 +88,7 @@ function Profile(props) {
             <div
               className={classes.placeholderImage}
               role="img"
-              alt="Upload a profile picture"
+              alt="Upload your profile pic"
             >
               <IconButton className={classes.iconButton}>
                 <input
@@ -100,7 +101,7 @@ function Profile(props) {
               </IconButton>
             </div>
           ) : (
-            <img src={photo} alt="Your profile picture" />
+            <img src={photo} alt="Your upload" />
           )}
           <h1 className={classes.header}>Secret Admirer</h1>
           <p className={classes.paragraph}>
@@ -112,13 +113,13 @@ function Profile(props) {
             fullWidth
             multiline
           />
-          <Button
+          {/* <Button
             variant={"contained"}
             color={"primary"}
             className={classes.submitButton}
           >
             Submit
-          </Button>
+          </Button> */}
         </Paper>
         <Navigation currentPage={props.currentPage} />
       </div>

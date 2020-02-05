@@ -1,5 +1,6 @@
 {
   "name": "april-fools-2020",
+  "homepage": "https://ginther.singles",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -12,6 +13,7 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-image": "^2.2.2",
     "react-router-dom": "^5.1.2",
     "use-force-update": "^1.0.7"
   },
