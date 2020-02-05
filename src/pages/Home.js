@@ -4,7 +4,10 @@ import { Helmet } from "react-helmet";
 import fiance from "../images/home/fiance.jpg";
 import mom from "../images/home/mom.jpg";
 import banner from "../images/home/banner.png";
-import mobileBanner from "../images/home/banner-mobile.png";
+import millionaireBanner from "../images/home/banners/millionaire.png";
+import pokerPlayerBanner from "../images/home/banners/poker-player.png";
+import stayAtHomeSonBanner from "../images/home/banners/stay-at-home-son.png";
+import streetFighterBanner from "../images/home/banners/street-fighter.png";
 import { isMobile } from "react-device-detect";
 import woman from "../images/home/shrugging-woman.jpg";
 import { pink } from "@material-ui/core/colors";
@@ -22,12 +25,21 @@ const useStyles = makeStyles(theme => ({
     textAlign: isMobile && "left"
   },
   testimonialPerson: {
-    margin: isMobile && theme.spacing(0, 0, 8),
+    margin: isMobile && theme.spacing(0, 0, 8)
   },
   banner: {
     display: "block",
     maxWidth: "100%",
     margin: isMobile ? theme.spacing(4, 0, 2) : theme.spacing(6, 0)
+  },
+  mobileBanner: {
+    display: "block",
+    maxWidth: "92%",
+    marginBottom: theme.spacing(3),
+  },
+  // TODO: Remove this hack
+  floatRight: {
+    float: "right",
   },
   headingTextContainer: {
     display: "flex",
@@ -41,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     padding: theme.spacing(1),
     textAlign: "center",
-    marginBottom: theme.spacing(2)
+    marginBottom: isMobile ? theme.spacing(6) : theme.spacing(2)
   },
   mainHeader: {
     margin: isMobile ? theme.spacing(6, 0, 2) : theme.spacing(6, 0, 1)
@@ -118,11 +130,38 @@ function Home() {
             Get started
           </Button>
           {isMobile && (
-            <img
-            src={mobileBanner}
-            alt={"The greatest app on the planet."}
-            className={classes.banner}
-          />
+            <Grid container>
+              <Grid item xs={6}>
+                <img
+                  src={stayAtHomeSonBanner}
+                  alt={""}
+                  className={classes.mobileBanner}
+                  loading="eager"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <img
+                  src={pokerPlayerBanner}
+                  alt={""}
+                  className={`${classes.mobileBanner} ${classes.floatRight}`}
+                  loading="eager"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <img
+                  src={streetFighterBanner}
+                  alt={""}
+                  className={classes.mobileBanner}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <img
+                  src={millionaireBanner}
+                  alt={""}
+                  className={`${classes.mobileBanner} ${classes.floatRight}`}
+                />
+              </Grid>
+            </Grid>
           )}
         </Grid>
         <Grid item xs={10} sm={12} align={"center"}>
@@ -142,7 +181,9 @@ function Home() {
             "He's such a great guy, I would recommend him to every girl. He is
             simply amazing."
           </p>
-          <h6 className={classes.testimonialPerson}>- Aliyah Profsplop, Adam's ex-fiance from 4 years ago</h6>
+          <h6 className={classes.testimonialPerson}>
+            - Aliyah Profsplop, Adam's ex-fiance from 4 years ago
+          </h6>
         </Grid>
         <Grid item xs={10} sm={4} align={"center"}>
           <img
@@ -160,7 +201,9 @@ function Home() {
         <Grid item xs={10} sm={4} align={"center"}>
           <img src={woman} alt={"Girl shrugging"} className={classes.image} />
           <p className={classes.testimonialBody}>"He was alright I guess?"</p>
-          <h6 className={classes.testimonialPerson}>- Adam's friend from grade 2</h6>
+          <h6 className={classes.testimonialPerson}>
+            - Adam's friend from grade 2
+          </h6>
         </Grid>
 
         <Grid item xs={10} lg={5} xl={6}>

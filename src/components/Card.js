@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(2, 2, 0, 0),
     display: "block",
     width: "100%",
-    minHeight: "200px",
+    minHeight: "320px",
     pointerEvents: "none"
   },
   burst: {
