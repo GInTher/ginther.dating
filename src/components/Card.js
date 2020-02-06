@@ -177,6 +177,7 @@ function SignUpForm() {
           start messaging me?{" "}
         </Link>
       </p>
+      
       <p>
         But also if you'd like, you can{" "}
         <Link
