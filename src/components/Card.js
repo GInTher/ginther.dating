@@ -34,14 +34,16 @@ const useStyles = makeStyles(theme => ({
       zIndex: 2,
       opacity: 0.9,
       transform: "scale(0.95)",
-      background: "#eee"
+      background: "#eee",
+      pointerEvents: "none"
     },
     "&:nth-child(3)": {
       top: theme.spacing(6),
       zIndex: 1,
       opacity: 0.5,
       transform: "scale(0.89)",
-      background: "#ddd"
+      background: "#ddd",
+      pointerEvents: "none"
     }
   },
   name: {
@@ -177,8 +179,8 @@ function SignUpForm() {
           start messaging me?{" "}
         </Link>
       </p>
-      
-      <p>
+
+      {/* <p>
         But also if you'd like, you can{" "}
         <Link
           className={classes.link}
@@ -188,6 +190,14 @@ function SignUpForm() {
         >
           go here to swipe all over again.
         </Link>
+      </p> */}
+
+      <h3>Is that not enough for you?</h3>
+      <p>
+        Then why don't you share me with your friends?{" "}
+        <span role="img" aria-label="Winking face">
+          😉
+        </span>
       </p>
     </div>
   );

@@ -26,10 +26,10 @@ const useStyles = makeStyles(theme => ({
   },
   testimonialSubheader: {
     marginBottom: isMobile ? theme.spacing(6) : theme.spacing(4),
-    textAlign: isMobile && "left",
+    textAlign: isMobile && "left"
   },
   testimonialPerson: {
-    margin: isMobile && theme.spacing(0, 0, 8)
+    margin: theme.spacing(0, 0, 6),
   },
   banner: {
     display: "block",
@@ -71,12 +71,12 @@ const useStyles = makeStyles(theme => ({
   subHeader: {
     marginTop: theme.spacing(0),
     fontWeight: 400,
-    marginBottom: theme.spacing(5)
+    marginBottom: theme.spacing(5),
+    lineHeight: 1.5
   },
   highlightedText: {
     color: pink[500],
     fontWeight: 700,
-    lineHeight: 1.5
   },
   image: {
     borderRadius: "50%",
@@ -137,16 +137,22 @@ function Home() {
           className={classes.headingTextContainer}
         >
           <h1 className={classes.mainHeader}>
-            Like Tinder or Grindr, except only with the{" "}
+            Like Tinder or Grindr, except only your{" "}
             <span className={classes.highlightedText}>VERY BEST</span> options.
           </h1>
-          <h4 className={classes.subHeader}>
+          {/* <h4 className={classes.subHeader}>
             Rather than wasting your time in a hopeless dating pool, this app
             will connect you to the absolutely most{" "}
             <span className={classes.highlightedText}>
               greatest people around you.
             </span>
-          </h4>
+          </h4> */}
+          <h3 className={classes.subHeader}>
+            The problem with previous dating apps were the men that used them, so we've built an app that uses complex algorithms to filter only the {" "}
+            <span className={classes.highlightedText}>
+              very greatest men around you.
+            </span>
+          </h3>
           <Button
             variant={"contained"}
             color={"primary"}
@@ -194,11 +200,13 @@ function Home() {
         <Grid item xs={11} sm={12} align={"center"}>
           <h1 className={classes.testimonialHeader}>
             Over <span className={classes.highlightedText}>3 women</span>{" "}
-            approved of{" "}
-            <span className={classes.highlightedText}>Adam Ginther.</span>
+            approved of{" "}Adam Ginther.
           </h1>
-          <h3 className={`${classes.subHeader} ${classes.testimonialSubheader}`}>
-            We even have testimonials from totally real women!
+          <h3
+            className={`${classes.subHeader} ${classes.testimonialSubheader}`}
+          >
+            We even have testimonials from{" "}
+            <span className={classes.highlightedText}>totally real women!</span>
           </h3>
         </Grid>
         <Grid item xs={11} sm={3} align={"center"}>
@@ -237,12 +245,10 @@ function Home() {
         </Grid>
 
         <Grid item xs={11} lg={5} xl={6}>
-          <h1 className={classes.bottomHeader}>
-            Well, what are you doing?
-          </h1>
+          <h1 className={classes.bottomHeader}>Well, what are you doing?</h1>
           <h3 className={classes.subHeader}>
-            <span className={classes.highlightedText}>Adam Ginther</span> is waiting for
-            you{" "}
+            <span className={classes.highlightedText}>Adam Ginther</span> is
+            waiting for you{" "}
             <span role="img" aria-label="Winking face">
               😉
             </span>

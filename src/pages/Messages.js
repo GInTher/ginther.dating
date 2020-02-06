@@ -32,7 +32,8 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     height: theme.spacing(10),
     width: theme.spacing(10),
-    marginRight: theme.spacing(3)
+    marginRight: theme.spacing(3),
+    // border: `2px solid ${pink[500]}`
   },
   name: {
     fontSize: "20px"
