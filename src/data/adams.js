@@ -153,7 +153,7 @@ export const Adams = [
   {
     imageAlt: "Handsome rapper, with a beatbox.",
     imageSrc: rapper,
-    occupation: "Rapper",
+    occupation: "Soundcloud Rapper",
   },
   {
     imageAlt: "A handsome rockstar.",

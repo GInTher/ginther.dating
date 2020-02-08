@@ -19,7 +19,6 @@ const theme = createMuiTheme({
   }
 });
 
-// TODO: Do I map through Adams object to generate routes here? Instead of using the children? :O
 function App() {
   return (
     <Router>

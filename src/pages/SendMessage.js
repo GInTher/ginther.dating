@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: isMobile ? theme.spacing(5) : theme.spacing(2),
     maxWidth: "670px",
     margin: "0 auto",
     background: "#fff"
@@ -80,7 +80,7 @@ const useStyles = makeStyles(theme => ({
     background: "none",
     border: 0,
     cursor: "pointer",
-    marginLeft: theme.spacing(2)
+    margin: theme.spacing(0, 1)
   },
   sendIcon: {
     fontSize: "36px",
@@ -122,6 +122,8 @@ function SendMessage(props) {
   const [typedMessage, setTypedMessage] = React.useState("");
 
   const chooseRandomMessage = Math.round(Math.random() * sendMessages.length);
+
+  // const chooseRandomMessage = sendMessages[Math.floor(Math.random() * sendMessages.length)]
 
   const handleSubmit = () => {
     typedMessage !== "" &&
@@ -223,7 +225,6 @@ function SendMessage(props) {
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} lg={6} justify={"center"}>
-          {/* TODO: Stop form from submitting */}
           <form
             autocomplete="off"
             className={classes.sendMessageToolbar}

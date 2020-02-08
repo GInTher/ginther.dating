@@ -107,7 +107,7 @@ function Home() {
                   src={stayAtHomeSonBanner}
                   alt={""}
                   className={classes.appBanner}
-                  loading="eager"
+                  loading={"eager"}
                 />
               </Grid>
               <Grid item xs={4}>
@@ -115,7 +115,7 @@ function Home() {
                   src={pokerPlayerBanner}
                   alt={""}
                   className={classes.appBanner}
-                  loading="eager"
+                  loading={"eager"}
                 />
               </Grid>
               <Grid item xs={4}>
@@ -123,7 +123,7 @@ function Home() {
                   src={millionaireBanner}
                   alt={""}
                   className={classes.appBanner}
-                  loading="eager"
+                  loading={"eager"}
                 />
               </Grid>
             </Grid>
@@ -169,7 +169,7 @@ function Home() {
                   src={stayAtHomeSonBanner}
                   alt={""}
                   className={classes.appBanner}
-                  loading="eager"
+                  loading={"eager"}
                 />
               </Grid>
               <Grid item xs={6}>
@@ -177,7 +177,7 @@ function Home() {
                   src={pokerPlayerBanner}
                   alt={""}
                   className={`${classes.appBanner} ${classes.floatRight}`}
-                  loading="eager"
+                  loading={"eager"}
                 />
               </Grid>
               <Grid item xs={6}>

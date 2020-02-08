@@ -33,7 +33,6 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(10),
     width: theme.spacing(10),
     marginRight: theme.spacing(3),
-    // border: `2px solid ${pink[500]}`
   },
   name: {
     fontSize: "20px"
@@ -41,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   messageContainer: {
     width: "100%",
     backgroundColor: theme.palette.background.paper,
-    marginBottom: theme.spacing(4)
+    marginBottom: "52px"
   },
   inline: {
     display: "inline"

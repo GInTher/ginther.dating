@@ -123,9 +123,8 @@ function SignUpForm() {
   };
 
   const swipeLeft = () => {
-    // TODO: Sometimes this returns undefined
     alert(
-      rejectedMessages[Math.round(Math.random() * rejectedMessages.length)]
+      rejectedMessages[Math.floor(Math.random() * rejectedMessages.length)]
     );
   };
 
@@ -204,9 +203,6 @@ function SignUpForm() {
 
   return (
     <div className={classes.container}>
-      {console.log(
-        Adams[Adams.length - 1].matched !== undefined ? true : false
-      )}
       {Adams[Adams.length - 1].matched !== undefined
         ? renderCompleteMessage
         : renderCards}
