@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    position: "relative"
+    position: "relative",
   },
   card: {
     // boxShadow: `0 0 10px ${grey[500]}`,
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(2, 2, 0, 0),
     display: "block",
     width: "100%",
-    minHeight: "320px",
+    minHeight: "280px",
     pointerEvents: "none"
   },
   burst: {

@@ -26,7 +26,7 @@ function Swipe(props) {
   return (
     <>
       <Helmet>
-        <title>Ginther | Swipe Right</title>
+        <title>Ginther | Swipe Right 😉</title>
       </Helmet>
       <div className={classes.pageContainer}>
           <Grid container className={classes.gridContainer}>

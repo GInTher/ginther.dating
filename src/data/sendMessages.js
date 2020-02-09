@@ -8,7 +8,7 @@ export const sendMessages = [
     "Hello Adam Ginther have I ever told you how handsome you are?",
     "Hello Adam Ginther have I ever told you how good looking you are?",
     "Heyyyyyyyyyyyyyyyyyyyy...",
-    "U up?",
+    "U up? I just wanted to chaaaaatttt...",
     "Hi baby",
     "Hey sexy",
     "Hey handsome",

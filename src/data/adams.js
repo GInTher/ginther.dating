@@ -3,7 +3,6 @@ import assistantRegionalManager from "../images/occupations/assistant-regional-m
 import bankRobber from "../images/occupations/bank-robber.jpg";
 import bartender from "../images/occupations/bartender.jpg";
 import basketballPlayer from "../images/occupations/basketball-player.jpg";
-// import beeKeeper from "../images/occupations/bee-keeper.jpg";
 import bodybuilder from "../images/occupations/bodybuilder.jpg";
 import boxer from "../images/occupations/boxer.jpg";
 import chef from "../images/occupations/chef.jpg";
@@ -39,11 +38,13 @@ export const Adams = [
     imageAlt: "Handsome assistant to the regional manager of Dunder Mifflin Paper Company.",
     imageSrc: assistantRegionalManager,
     occupation: "Assistant to the Regional Manager",
+    bio: "Is it a beet season? Because you look ripe and ready for picking."
   },
   {
     imageAlt: "Handsome man, with a big bag of money.",
     imageSrc: bankRobber,
     occupation: "Bank Robber",
+    bio: "Will rob a bank, but will also rob you of your love."
   },
   {
     imageAlt: "Handsome man, serving liquor.",
@@ -55,11 +56,6 @@ export const Adams = [
     imageSrc: basketballPlayer,
     occupation: "Basketball Player",
   },
-  // {
-  //   imageAlt: "Handsome man, keeping bees.",
-  //   imageSrc: beeKeeper,
-  //   occupation: "Bee Keeper",
-  // },
   {
     imageAlt: "Handsome man, building a handsome body.",
     imageSrc: bodybuilder,
@@ -69,6 +65,7 @@ export const Adams = [
     imageAlt: "Handsome man, kicking ass.",
     imageSrc: boxer,
     occupation: "Boxer",
+    bio: "I look good in boxers too!"
   },
   {
     imageAlt: "Handsome man, serving a salad.",
@@ -94,6 +91,7 @@ export const Adams = [
     imageAlt: "Handsome man, being a great detective.",
     imageSrc: detective,
     occupation: "Detective",
+    bio: "Can always investigate your broken heart ;)"
   },
   {
     imageAlt: "Handsome man, being an amazing DJ.",
@@ -104,6 +102,7 @@ export const Adams = [
     imageAlt: "Handsome man, also saving a child.",
     imageSrc: firefighter,
     occupation: "Firefighter",
+    bio: "The only thing that's hotter than the fires I save people from is you."
   },
   {
     imageAlt: "A handsome lumberjack.",
@@ -114,6 +113,7 @@ export const Adams = [
     imageAlt: "Handsome man, making crazy potions.",
     imageSrc: madScientist,
     occupation: "Mad Scientist",
+    bio: "I'm sure we'll have great chemistry!"
   },
   {
     imageAlt: "Handsome man, with a lot of money.",
@@ -134,6 +134,7 @@ export const Adams = [
     imageAlt: "Handsome man, telling you the news.",
     imageSrc: newsAnchor,
     occupation: "News Anchor",
+    bio: "How I gained your love and affection, tonight at 7!"
   },
   {
     imageAlt: "Handsome man, playing poker.",
@@ -149,6 +150,7 @@ export const Adams = [
     imageAlt: "Handsome cop, arresting someone.",
     imageSrc: cop,
     occupation: "Police Officer",
+    bio: "I'll always have an extra pair of handcuffs for you."
   },
   {
     imageAlt: "Handsome rapper, with a beatbox.",
@@ -164,11 +166,13 @@ export const Adams = [
     imageAlt: "Handsome man, with his children.",
     imageSrc: stayAtHomeFather,
     occupation: "Stay-at-home Father",
+    bio: "I have three kids from three different wives, and I'm always open for a fourth."
   },
   {
     imageAlt: "Handsome man, eating chips.",
     imageSrc: stayAtHomeSon,
     occupation: "Stay-at-home Son",
+    bio: "Not a stay-at-home father. Yet..."
   },
   {
     imageAlt: "A handsome street fighter kicking some ass.",

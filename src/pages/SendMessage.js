@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     bottom: theme.spacing(3),
     paddingBottom: isMobile ? theme.spacing(2) : theme.spacing(2),
     maxWidth: "670px",
-    borderTop: `1px solid ${grey[400]}`,
+    borderTop: isMobile ? `1px solid ${grey[400]}` : "none",
     margin: "0 auto",
     background: "#fff"
   },
