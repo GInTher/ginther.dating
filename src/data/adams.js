@@ -161,6 +161,7 @@ export const Adams = [
     imageAlt: "A handsome rockstar.",
     imageSrc: rockstar,
     occupation: "Rockstar",
+    bio: "test",
   },
   {
     imageAlt: "Handsome man, with his children.",
