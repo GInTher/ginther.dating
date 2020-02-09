@@ -1,0 +1,15 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-april-fools-2020-prod-151825-authRole",
+            "UnauthRoleArn": "arn:aws:iam::363342485516:role/amplify-april-fools-2020-prod-151825-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::363342485516:role/amplify-april-fools-2020-prod-151825-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-april-fools-2020-prod-151825-deployment",
+            "UnauthRoleName": "amplify-april-fools-2020-prod-151825-unauthRole",
+            "StackName": "amplify-april-fools-2020-prod-151825",
+            "StackId": "arn:aws:cloudformation:us-east-2:363342485516:stack/amplify-april-fools-2020-prod-151825/50831030-4ac9-11ea-9503-0af659736e02",
+            "AmplifyAppId": "d164rwau8wkcs2"
+        }
+    }
+}

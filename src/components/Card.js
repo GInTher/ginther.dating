@@ -112,7 +112,6 @@ function SignUpForm() {
   const forceUpdate = useForceUpdate();
   const classes = useStyles();
 
-  // TODO: How do you reference current object instead of false?
   const [matched, setMatched] = React.useState(false);
 
   const swipeRight = index => {

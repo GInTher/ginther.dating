@@ -41,7 +41,6 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "92%",
     margin: isMobile ? theme.spacing(0, 0, 3) : theme.spacing(10, 0)
   },
-  // TODO: Remove this hack
   floatRight: {
     float: "right"
   },

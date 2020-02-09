@@ -71,8 +71,10 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     left: 0,
     right: 0,
-    bottom: isMobile ? theme.spacing(5) : theme.spacing(2),
+    bottom: theme.spacing(3),
+    paddingBottom: isMobile ? theme.spacing(2) : theme.spacing(2),
     maxWidth: "670px",
+    borderTop: `1px solid ${grey[400]}`,
     margin: "0 auto",
     background: "#fff"
   },
@@ -122,10 +124,12 @@ function SendMessage(props) {
   const [typedMessage, setTypedMessage] = React.useState("");
 
   const chooseRandomMessage = Math.round(Math.random() * sendMessages.length);
-
-  // const chooseRandomMessage = sendMessages[Math.floor(Math.random() * sendMessages.length)]
+  const textInput = React.createRef();
 
   const handleSubmit = () => {
+    // TODO: Find a better way of selecting this
+    textInput.current.querySelector("input").value = "";
+    textInput.current.value = "";
     typedMessage !== "" &&
       setMessages([...messages, sendMessages[chooseRandomMessage]]);
   };
@@ -231,7 +235,6 @@ function SendMessage(props) {
             onSubmit={e => e.preventDefault()}
           >
             <TextField
-              id="outlined-textarea"
               label="Send a message"
               placeholder="I'm waiting..."
               autocomplete="false"
@@ -239,11 +242,15 @@ function SendMessage(props) {
               margin="normal"
               variant="outlined"
               autoFocus={!isMobile}
+              ref={textInput}
+              // value={setTypedMessage ? "" : undefined}
               onChange={e => {
                 setTypedMessage(e.target.value);
               }}
               onFocus={document.addEventListener("keydown", event => {
                 if (event.key === "Enter") {
+                  // textInput.current.querySelector("input").value = "";
+                  document.querySelector("input.MuiInputBase-input").value = "";
                   setMessages([...messages, sendMessages[chooseRandomMessage]]);
                 }
 
@@ -253,7 +260,9 @@ function SendMessage(props) {
             <button
               className={classes.sendButton}
               onClick={handleSubmit}
-              disabled={!typedMessage}
+              disabled={
+                !typedMessage
+              }
               type="button"
             >
               <Send
