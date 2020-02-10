@@ -117,6 +117,7 @@ export const Adams = [
     imageSrc: collegeStudent,
     imageSrcWebp: collegeStudentWebp,
     occupation: "College Student",
+    bio: "Will be able to study you very well."
   },
   {
     imageAlt: "Handsome cowboy, about to lassoo you.",
