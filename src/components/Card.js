@@ -154,7 +154,7 @@ function SignUpForm() {
         <picture>
           <source
             type="image/webp"
-            src={obj.imageSrcWebp}
+            srcSet={obj.imageSrcWebp}
             alt={obj.imageAlt}
             loading={index < 3 && "eager"}
           />

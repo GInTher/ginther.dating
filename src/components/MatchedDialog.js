@@ -103,16 +103,10 @@ function MatchedDialog(props) {
     >
       <DialogContent>
         <div className={classes.gradientBackground} />
-
-        {/* <img
-            src={props.imageSrc}
-            alt={props.imageAlt}
-            className={classes.image}
-          /> */}
         <picture>
           <source
             type="image/webp"
-            src={props.imageSrcWebp}
+            srcSet={props.imageSrcWebp}
             alt={props.imageAlt}
           />
           <img
