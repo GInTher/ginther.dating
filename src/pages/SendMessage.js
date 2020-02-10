@@ -264,6 +264,7 @@ function SendMessage(props) {
                 !typedMessage
               }
               type="button"
+              name="Send Message"
             >
               <Send
                 color={typedMessage ? "primary" : "disabled"}

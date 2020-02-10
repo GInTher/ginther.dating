@@ -113,13 +113,6 @@ function Profile(props) {
             fullWidth
             multiline
           />
-          {/* <Button
-            variant={"contained"}
-            color={"primary"}
-            className={classes.submitButton}
-          >
-            Submit
-          </Button> */}
         </Paper>
         <Navigation currentPage={props.currentPage} />
       </div>

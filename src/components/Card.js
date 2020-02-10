@@ -153,12 +153,14 @@ function SignUpForm() {
         <button
           className={`${classes.button} ${classes.swipeLeft}`}
           onClick={swipeLeft}
+          name="Swipe Left"
         >
           <Close />
         </button>
         <button
           className={`${classes.button} ${classes.swipeRight}`}
           onClick={() => swipeRight(index)}
+          name={"Swipe Right"}
         >
           <Favorite />
         </button>
