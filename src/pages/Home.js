@@ -27,14 +27,17 @@ import SignUpForm from "../components/SignUpForm";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    margin: "0 auto"
+    marginTop: isMobile ? "0" : theme.spacing(10)
+  },
+  signupContainer: {
+    margin: isMobile ? "inherit" : theme.spacing(3, 0)
   },
   signupMessaging: {
     padding: isMobile ? theme.spacing(2, 0) : theme.spacing(10, 0)
   },
   testimonialHeader: {
-    marginTop: isMobile ? theme.spacing(8) : theme.spacing(4),
-    textAlign: isMobile && "left",
+    marginTop: isMobile ? theme.spacing(8) : theme.spacing(16),
+    textAlign: isMobile ? "left" : "inherit",
     fontSize: "1.8rem"
   },
   testimonialSubheader: {
@@ -42,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: isMobile && "left"
   },
   testimonialPerson: {
-    margin: theme.spacing(0, 0, 6)
+    marginBottom: isMobile ? theme.spacing(6) : theme.spacing(13)
   },
   banner: {
     display: "block",
@@ -75,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     margin: isMobile ? theme.spacing(12, 0, 2) : theme.spacing(6, 0, 1)
   },
   bottomHeader: {
-    margin: !isMobile && theme.spacing(6, 0, 1)
+    margin: !isMobile && theme.spacing(12, 0, 1)
   },
   paragraph: {
     lineHeight: 1.5
@@ -332,7 +335,7 @@ function Home() {
             </span>
           </h3>
         </Grid>
-        <Grid item xs={11} lg={5}>
+        <Grid item xs={11} lg={5} className={classes.signupContainer}>
           <SignUpForm />
         </Grid>
       </Grid>
