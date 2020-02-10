@@ -2,16 +2,26 @@ import React from "react";
 import { Button, Grid, makeStyles } from "@material-ui/core/";
 import { Helmet } from "react-helmet";
 import fiance from "../images/home/fiance.jpg";
+import fianceWebp from "../images/home/fiance.webp";
 import mom from "../images/home/mom.jpg";
+import momWebp from "../images/home/mom.webp";
 import millionaireDesktopBanner from "../images/home/desktop-banners/millionaire.png";
 import pokerPlayerDesktopBanner from "../images/home/desktop-banners/poker-player.png";
 import stayAtHomeSonDesktopBanner from "../images/home/desktop-banners/stay-at-home-son.png";
+import millionaireDesktopBannerWebp from "../images/home/desktop-banners/millionaire.webp";
+import pokerPlayerDesktopBannerWebp from "../images/home/desktop-banners/poker-player.webp";
+import stayAtHomeSonDesktopBannerWebp from "../images/home/desktop-banners/stay-at-home-son.webp";
+import stayAtHomeSonMobileBannerWebp from "../images/home/mobile-banners/stay-at-home-son.webp";
 import millionaireMobileBanner from "../images/home/mobile-banners/millionaire.png";
+import millionaireMobileBannerWebp from "../images/home/mobile-banners/millionaire.webp";
 import pokerPlayerMobileBanner from "../images/home/mobile-banners/poker-player.png";
+import pokerPlayerMobileBannerWebp from "../images/home/mobile-banners/poker-player.webp";
 import stayAtHomeSonMobileBanner from "../images/home/mobile-banners/stay-at-home-son.png";
 import streetFighterMobileBanner from "../images/home/mobile-banners/street-fighter.png";
+import streetFighterMobileBannerWebp from "../images/home/mobile-banners/street-fighter.webp";
 import { isMobile } from "react-device-detect";
 import woman from "../images/home/shrugging-woman.jpg";
+import womanWebp from "../images/home/shrugging-woman.webp";
 import { pink } from "@material-ui/core/colors";
 import SignUpForm from "../components/SignUpForm";
 
@@ -32,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: isMobile && "left"
   },
   testimonialPerson: {
-    margin: theme.spacing(0, 0, 6),
+    margin: theme.spacing(0, 0, 6)
   },
   banner: {
     display: "block",
@@ -78,7 +88,7 @@ const useStyles = makeStyles(theme => ({
   },
   highlightedText: {
     color: pink[500],
-    fontWeight: 700,
+    fontWeight: 700
   },
   image: {
     borderRadius: "50%",
@@ -105,28 +115,46 @@ function Home() {
           {!isMobile && (
             <Grid container>
               <Grid item xs={4}>
-                <img
-                  src={stayAtHomeSonDesktopBanner}
-                  alt={""}
-                  className={classes.appBanner}
-                  loading={"eager"}
-                />
+                <picture>
+                  <source
+                    srcset={stayAtHomeSonDesktopBannerWebp}
+                    type="image/webp"
+                  />
+                  <img
+                    src={stayAtHomeSonDesktopBanner}
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                </picture>
               </Grid>
               <Grid item xs={4}>
-                <img
-                  src={pokerPlayerDesktopBanner}
-                  alt={""}
-                  className={classes.appBanner}
-                  loading={"eager"}
-                />
+                <picture>
+                  <source
+                    srcset={pokerPlayerDesktopBannerWebp}
+                    type="image/webp"
+                  />
+                  <img
+                    src={pokerPlayerDesktopBanner}
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                </picture>
               </Grid>
               <Grid item xs={4}>
-                <img
-                  src={millionaireDesktopBanner}
-                  alt={""}
-                  className={classes.appBanner}
-                  loading={"eager"}
-                />
+                <picture>
+                  <source
+                    srcset={millionaireDesktopBannerWebp}
+                    type="image/webp"
+                  />
+                  <img
+                    src={millionaireDesktopBanner}
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                </picture>
               </Grid>
             </Grid>
           )}
@@ -150,7 +178,9 @@ function Home() {
             </span>
           </h4> */}
           <h3 className={classes.subHeader}>
-            The problem with previous dating apps were the men that used them, so we've built an app that uses complex algorithms to filter only the {" "}
+            The problem with previous dating apps were the men that used them,
+            so we've built an app that uses complex algorithms to filter only
+            the{" "}
             <span className={classes.highlightedText}>
               very greatest men around you.
             </span>
@@ -167,34 +197,69 @@ function Home() {
           {isMobile && (
             <Grid container>
               <Grid item xs={6}>
-                <img
-                  src={stayAtHomeSonMobileBanner}
-                  alt={""}
-                  className={classes.appBanner}
-                  loading={"eager"}
-                />
+                <picture>
+                  <source
+                    srcSet={stayAtHomeSonMobileBannerWebp}
+                    type="image/webp"
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                  <img
+                    src={stayAtHomeSonMobileBanner}
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                </picture>
               </Grid>
               <Grid item xs={6}>
-                <img
-                  src={pokerPlayerMobileBanner}
-                  alt={""}
-                  className={`${classes.appBanner} ${classes.floatRight}`}
-                  loading={"eager"}
-                />
+                <picture>
+                  <source
+                    srcSet={pokerPlayerMobileBannerWebp}
+                    type="image/webp"
+                    alt={""}
+                    className={classes.appBanner}
+                    loading={"eager"}
+                  />
+                  <img
+                    src={pokerPlayerMobileBanner}
+                    alt={""}
+                    className={`${classes.appBanner} ${classes.floatRight}`}
+                    loading={"eager"}
+                  />
+                </picture>
               </Grid>
               <Grid item xs={6}>
-                <img
-                  src={streetFighterMobileBanner}
-                  alt={""}
-                  className={classes.appBanner}
-                />
+                <picture>
+                  <source
+                    srcSet={streetFighterMobileBannerWebp}
+                    type="image/webp"
+                    alt={""}
+                    
+                    loading={"eager"}
+                  />
+                  <img
+                    src={streetFighterMobileBanner}
+                    alt={""}
+                    className={classes.appBanner}
+                  />
+                </picture>
               </Grid>
               <Grid item xs={6}>
-                <img
-                  src={millionaireMobileBanner}
-                  alt={""}
-                  className={`${classes.appBanner} ${classes.floatRight}`}
-                />
+                <picture>
+                  <source
+                    srcSet={millionaireMobileBannerWebp}
+                    type="image/webp"
+                    alt={""}
+                    className={`${classes.appBanner} ${classes.floatRight}`}
+                  />
+                  <img
+                    src={millionaireMobileBanner}
+                    alt={""}
+                    className={`${classes.appBanner} ${classes.floatRight}`}
+                  />
+                </picture>
               </Grid>
             </Grid>
           )}
@@ -202,7 +267,7 @@ function Home() {
         <Grid item xs={11} sm={12} align={"center"}>
           <h1 className={classes.testimonialHeader}>
             Over <span className={classes.highlightedText}>3 women</span>{" "}
-            approved of{" "}Adam Ginther.
+            approved of Adam Ginther.
           </h1>
           <h3
             className={`${classes.subHeader} ${classes.testimonialSubheader}`}
@@ -212,11 +277,18 @@ function Home() {
           </h3>
         </Grid>
         <Grid item xs={11} sm={3} align={"center"}>
-          <img
-            src={fiance}
-            alt={"Women being proposed to by a handsome man."}
-            className={classes.image}
-          />
+          <picture>
+            <source
+              srcSet={fianceWebp}
+              type="image/webp"
+              alt={"A lady getting engaged."}
+            />
+            <img
+              src={fiance}
+              alt={"A lady getting engaged."}
+              className={classes.image}
+            />
+          </picture>
           <p className={classes.testimonialBody}>
             "He's such a great guy, I would recommend him to every girl. He is
             simply amazing."
@@ -226,11 +298,18 @@ function Home() {
           </h6>
         </Grid>
         <Grid item xs={11} sm={3} align={"center"}>
-          <img
-            src={mom}
-            alt={"A handsome man and his mom."}
-            className={classes.image}
-          />
+          <picture>
+            <source
+              srcSet={momWebp}
+              type="image/webp"
+              alt={"A handsome man and his mom."}
+            />
+            <img
+              src={mom}
+              alt={"A handsome man and his mom."}
+              className={classes.image}
+            />
+          </picture>
           <p className={classes.testimonialBody}>
             "He's my favourite son.
             <br />
@@ -239,7 +318,14 @@ function Home() {
           <h6 className={classes.testimonialPerson}>- Adam's mom</h6>
         </Grid>
         <Grid item xs={11} sm={3} align={"center"}>
-          <img src={woman} alt={"Girl shrugging"} className={classes.image} />
+          <picture>
+            <source
+              srcSet={womanWebp}
+              type="image/webp"
+              alt={"Girl shrugging"}
+            />
+            <img src={woman} alt={"Girl shrugging"} className={classes.image} />
+          </picture>
           <p className={classes.testimonialBody}>"He was alright I guess?"</p>
           <h6 className={classes.testimonialPerson}>
             - Adam's friend from grade 2

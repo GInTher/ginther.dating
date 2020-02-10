@@ -62,7 +62,8 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     marginTop: theme.spacing(1),
     marginBottom: 0,
-    borderRadius: theme.spacing(1)
+    borderRadius: theme.spacing(1),
+    lineHeight: 1.5
   },
   sendMessageToolbar: {
     display: "flex",
