@@ -120,7 +120,7 @@ function Home() {
               <Grid item xs={4}>
                 <picture>
                   <source
-                    srcset={stayAtHomeSonDesktopBannerWebp}
+                    srcSet={stayAtHomeSonDesktopBannerWebp}
                     type="image/webp"
                     loading={"eager"}
                   />
@@ -135,7 +135,7 @@ function Home() {
               <Grid item xs={4}>
                 <picture>
                   <source
-                    srcset={pokerPlayerDesktopBannerWebp}
+                    srcSet={pokerPlayerDesktopBannerWebp}
                     type="image/webp"
                     loading={"eager"}
                   />
@@ -150,7 +150,7 @@ function Home() {
               <Grid item xs={4}>
                 <picture>
                   <source
-                    srcset={millionaireDesktopBannerWebp}
+                    srcSet={millionaireDesktopBannerWebp}
                     type="image/webp"
                     loading={"eager"}
                   />

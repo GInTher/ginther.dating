@@ -7,11 +7,20 @@ import Profile from "./pages/Profile";
 import SendMessage from "./pages/SendMessage";
 import { Adams } from "./data/adams";
 import { pink } from "@material-ui/core/colors";
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from "react-router-dom";
+
+const history = createBrowserHistory();
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
 const theme = createMuiTheme({
   palette: {
@@ -20,8 +29,10 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  ReactGA.initialize("UA-158087755-1");
+
   return (
-    <Router>
+    <Router history={history}>
       <ThemeProvider theme={theme}>
         <Switch>
           <Route exact path="/" children={<Home />} />
