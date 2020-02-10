@@ -145,13 +145,13 @@ function SignUpForm() {
         onDragStart={() => swipeRight(index)}
         draggable={true}
       >
-        <img
+        {/* <img
             src={obj.imageSrc}
             alt={obj.imageAlt}
             className={classes.image}
             loading={index < 3 && "eager"}
-          />
-        {/* <picture>
+          /> */}
+        <picture>
           <source
             type="image/webp"
             src={obj.imageSrcWebp}
@@ -164,7 +164,7 @@ function SignUpForm() {
             className={classes.image}
             loading={index < 3 && "eager"}
           />
-        </picture> */}
+        </picture>
         <button
           className={`${classes.button} ${classes.swipeLeft}`}
           onClick={swipeLeft}
