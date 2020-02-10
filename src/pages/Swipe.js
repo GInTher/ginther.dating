@@ -7,6 +7,7 @@ import Navigation from "../components/Navigation";
 const useStyles = makeStyles(theme => ({
   pageContainer: {
     padding: theme.spacing(2, 2, 0),
+    // #ff8960 to ff62a5
     background:
       "linear-gradient(4deg, rgba(255,137,96,1) 0%, rgba(255,98,165,1) 100%);",
     height: `calc(100vh - ${theme.spacing(8)}px)`
@@ -26,7 +27,7 @@ function Swipe(props) {
   return (
     <>
       <Helmet>
-        <title>Ginther | Swipe Right 😉</title>
+        <title>Ginther | Swipe Right</title>
       </Helmet>
       <div className={classes.pageContainer}>
           <Grid container className={classes.gridContainer}>

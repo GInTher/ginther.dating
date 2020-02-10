@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     display: "block",
     width: "100%",
     minHeight: "280px",
-    pointerEvents: "none",
+    pointerEvents: "none"
   },
   burst: {
     left: 0,
@@ -111,6 +111,32 @@ const useStyles = makeStyles(theme => ({
     "&:focus": {
       textDecoration: "underline"
     }
+  },
+  nameLink: {
+    color: "#fff",
+    fontWeight: 800,
+    textDecoration: "underline",
+    marginLeft: theme.spacing(0.5),
+
+    "&:hover": {
+      textDecoration: "underline"
+    },
+
+    "&:focus": {
+      textDecoration: "underline"
+    }
+  },
+  madeWithLoveContainer: {
+    textAlign: "center",
+    marginTop: theme.spacing(10),
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  heartIcon: {
+    fontSize: "35px",
+    display: "inline-block",
+    margin: theme.spacing(0, 1)
   }
 }));
 
@@ -207,13 +233,29 @@ function SignUpForm() {
         </Link>
       </p> */}
 
-      <h3>Is that not enough for you?</h3>
+      {/* <h3>Is that not enough for you?</h3>
       <p>
         Then why don't you share me with your friends?{" "}
         <span role="img" aria-label="Winking face">
           😉
         </span>
-      </p>
+      </p> */}
+
+      <h3 className={classes.madeWithLoveContainer}>
+        (Made with{" "}
+        <span role="img" aria-label="Love" className={classes.heartIcon}>
+          💖
+        </span>{" "}
+        by{"  "}
+        <a
+          href="https://www.instagram.com/instagintheram/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.nameLink}
+        >
+          Adam Ginther)
+        </a>
+      </h3>
     </div>
   );
 
