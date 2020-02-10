@@ -3,10 +3,13 @@ import { Button, Grid, makeStyles } from "@material-ui/core/";
 import { Helmet } from "react-helmet";
 import fiance from "../images/home/fiance.jpg";
 import mom from "../images/home/mom.jpg";
-import millionaireBanner from "../images/home/banners/millionaire.png";
-import pokerPlayerBanner from "../images/home/banners/poker-player.png";
-import stayAtHomeSonBanner from "../images/home/banners/stay-at-home-son.png";
-import streetFighterBanner from "../images/home/banners/street-fighter.png";
+import millionaireDesktopBanner from "../images/home/desktop-banners/millionaire.png";
+import pokerPlayerDesktopBanner from "../images/home/desktop-banners/poker-player.png";
+import stayAtHomeSonDesktopBanner from "../images/home/desktop-banners/stay-at-home-son.png";
+import millionaireMobileBanner from "../images/home/mobile-banners/millionaire.png";
+import pokerPlayerMobileBanner from "../images/home/mobile-banners/poker-player.png";
+import stayAtHomeSonMobileBanner from "../images/home/mobile-banners/stay-at-home-son.png";
+import streetFighterMobileBanner from "../images/home/mobile-banners/street-fighter.png";
 import { isMobile } from "react-device-detect";
 import woman from "../images/home/shrugging-woman.jpg";
 import { pink } from "@material-ui/core/colors";
@@ -103,7 +106,7 @@ function Home() {
             <Grid container>
               <Grid item xs={4}>
                 <img
-                  src={stayAtHomeSonBanner}
+                  src={stayAtHomeSonDesktopBanner}
                   alt={""}
                   className={classes.appBanner}
                   loading={"eager"}
@@ -111,7 +114,7 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <img
-                  src={pokerPlayerBanner}
+                  src={pokerPlayerDesktopBanner}
                   alt={""}
                   className={classes.appBanner}
                   loading={"eager"}
@@ -119,7 +122,7 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <img
-                  src={millionaireBanner}
+                  src={millionaireDesktopBanner}
                   alt={""}
                   className={classes.appBanner}
                   loading={"eager"}
@@ -165,7 +168,7 @@ function Home() {
             <Grid container>
               <Grid item xs={6}>
                 <img
-                  src={stayAtHomeSonBanner}
+                  src={stayAtHomeSonMobileBanner}
                   alt={""}
                   className={classes.appBanner}
                   loading={"eager"}
@@ -173,7 +176,7 @@ function Home() {
               </Grid>
               <Grid item xs={6}>
                 <img
-                  src={pokerPlayerBanner}
+                  src={pokerPlayerMobileBanner}
                   alt={""}
                   className={`${classes.appBanner} ${classes.floatRight}`}
                   loading={"eager"}
@@ -181,14 +184,14 @@ function Home() {
               </Grid>
               <Grid item xs={6}>
                 <img
-                  src={streetFighterBanner}
+                  src={streetFighterMobileBanner}
                   alt={""}
                   className={classes.appBanner}
                 />
               </Grid>
               <Grid item xs={6}>
                 <img
-                  src={millionaireBanner}
+                  src={millionaireMobileBanner}
                   alt={""}
                   className={`${classes.appBanner} ${classes.floatRight}`}
                 />
