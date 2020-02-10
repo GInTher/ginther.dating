@@ -154,6 +154,7 @@ function SignUpForm() {
           <source
             type="image/webp"
             srcSet={obj.imageSrcWebp}
+            loading={index < 3 && "eager"}
           />
           {/* TODO: Find a better way to dynamically update height */}
           <img

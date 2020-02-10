@@ -119,6 +119,7 @@ function Home() {
                   <source
                     srcset={stayAtHomeSonDesktopBannerWebp}
                     type="image/webp"
+                    loading={"eager"}
                   />
                   <img
                     src={stayAtHomeSonDesktopBanner}
@@ -133,6 +134,7 @@ function Home() {
                   <source
                     srcset={pokerPlayerDesktopBannerWebp}
                     type="image/webp"
+                    loading={"eager"}
                   />
                   <img
                     src={pokerPlayerDesktopBanner}
@@ -147,6 +149,7 @@ function Home() {
                   <source
                     srcset={millionaireDesktopBannerWebp}
                     type="image/webp"
+                    loading={"eager"}
                   />
                   <img
                     src={millionaireDesktopBanner}
@@ -201,6 +204,7 @@ function Home() {
                   <source
                     srcSet={stayAtHomeSonMobileBannerWebp}
                     type="image/webp"
+                    loading={"eager"}
                   />
                   <img
                     src={stayAtHomeSonMobileBanner}
@@ -215,6 +219,7 @@ function Home() {
                   <source
                     srcSet={pokerPlayerMobileBannerWebp}
                     type="image/webp"
+                    loading={"eager"}
                   />
                   <img
                     src={pokerPlayerMobileBanner}
