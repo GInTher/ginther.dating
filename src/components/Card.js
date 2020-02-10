@@ -125,7 +125,6 @@ function SignUpForm() {
     setMatched(true);
     // TODO: Pass down props properly instead of using forceUpdate
     forceUpdate();
-    localStorage.setItem(Adams[index].occupation, true);
   };
 
   const swipeLeft = () => {
@@ -157,7 +156,6 @@ function SignUpForm() {
             srcSet={obj.imageSrcWebp}
             loading={index < 3 && "eager"}
           />
-          {/* TODO: Find a better way to dynamically update height */}
           <img
             src={obj.imageSrc}
             alt={obj.imageAlt}

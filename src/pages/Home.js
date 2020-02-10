@@ -196,7 +196,7 @@ function Home() {
           </Button>
           {isMobile && (
             <Grid container>
-              <Grid item xs={6}>
+              <Grid item xs={6} sm={3}>
                 <picture>
                   <source
                     srcSet={stayAtHomeSonMobileBannerWebp}
@@ -211,7 +211,7 @@ function Home() {
                   />
                 </picture>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} sm={3}>
                 <picture>
                   <source
                     srcSet={pokerPlayerMobileBannerWebp}
@@ -226,7 +226,7 @@ function Home() {
                   />
                 </picture>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} sm={3}>
                 <picture>
                   <source
                     srcSet={streetFighterMobileBannerWebp}
@@ -239,7 +239,7 @@ function Home() {
                   />
                 </picture>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} sm={3}>
                 <picture>
                   <source
                     srcSet={millionaireMobileBannerWebp}
@@ -255,7 +255,7 @@ function Home() {
             </Grid>
           )}
         </Grid>
-        <Grid item xs={11} sm={12} align={"center"}>
+        <Grid item xs={11} sm={12} md={11} align={"center"}>
           <h1 className={classes.testimonialHeader}>
             Over <span className={classes.highlightedText}>3 women</span>{" "}
             approved of Adam Ginther.
@@ -267,7 +267,7 @@ function Home() {
             <span className={classes.highlightedText}>totally real women!</span>
           </h3>
         </Grid>
-        <Grid item xs={11} sm={3} align={"center"}>
+        <Grid item xs={11} sm={3} md={4} align={"center"}>
           <picture>
             <source
               srcSet={fianceWebp}
@@ -292,7 +292,7 @@ function Home() {
             - Aliyah Profsplop, Adam's ex-fiance from 4 years ago
           </h6>
         </Grid>
-        <Grid item xs={11} sm={3} align={"center"}>
+        <Grid item xs={11} sm={3} md={4} align={"center"}>
           <picture>
             <source
               srcSet={momWebp}
@@ -315,7 +315,7 @@ function Home() {
           </p>
           <h6 className={classes.testimonialPerson}>- Adam's mom</h6>
         </Grid>
-        <Grid item xs={11} sm={3} align={"center"}>
+        <Grid item xs={11} sm={3} md={4} align={"center"}>
           <picture>
             <source
               srcSet={womanWebp}
