@@ -7,7 +7,7 @@ import Profile from "./pages/Profile";
 import SendMessage from "./pages/SendMessage";
 import { Adams } from "./data/adams";
 import { pink } from "@material-ui/core/colors";
-import GA from 'utils/GoogleAnalytics'
+import GA from './utils/GoogleAnalytics'
 import {
   BrowserRouter as Router,
   Route,
@@ -22,7 +22,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <Router history={history}>
+    <Router>
       { GA.init() && <GA.RouteTracker /> }
       <ThemeProvider theme={theme}>
         <Switch>
