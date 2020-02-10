@@ -119,6 +119,7 @@ function SignUpForm() {
     setMatched(true);
     // TODO: Pass down props properly instead of using forceUpdate
     forceUpdate();
+    localStorage.setItem(Adams[index].occupation, true)
   };
 
   const swipeLeft = () => {
