@@ -165,12 +165,7 @@ function Home() {
             </Grid>
           )}
         </Grid>
-        <Grid
-          item
-          xs={11}
-          lg={5}
-          className={classes.headingTextContainer}
-        >
+        <Grid item xs={11} lg={5} className={classes.headingTextContainer}>
           <h1 className={classes.mainHeader}>
             Like Tinder or Grindr, except only your{" "}
             <span className={classes.highlightedText}>VERY BEST</span> options.
@@ -277,11 +272,16 @@ function Home() {
             <source
               srcSet={fianceWebp}
               type="image/webp"
+              width={150}
+              height={150}
             />
             <img
               src={fiance}
               alt={"A lady getting engaged."}
               className={classes.image}
+              width={150}
+              height={150}
+              s
             />
           </picture>
           <p className={classes.testimonialBody}>
@@ -297,11 +297,15 @@ function Home() {
             <source
               srcSet={momWebp}
               type="image/webp"
+              width={150}
+              height={150}
             />
             <img
               src={mom}
               alt={"A handsome man and his mom."}
               className={classes.image}
+              width={150}
+              height={150}
             />
           </picture>
           <p className={classes.testimonialBody}>
@@ -316,8 +320,16 @@ function Home() {
             <source
               srcSet={womanWebp}
               type="image/webp"
+              width={150}
+              height={150}
             />
-            <img src={woman} alt={"Girl shrugging"} className={classes.image} />
+            <img
+              src={woman}
+              alt={"Girl shrugging"}
+              className={classes.image}
+              width={150}
+              height={150}
+            />
           </picture>
           <p className={classes.testimonialBody}>"He was alright I guess?"</p>
           <h6 className={classes.testimonialPerson}>
