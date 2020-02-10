@@ -111,7 +111,7 @@ function Home() {
         <title>Ginther | Home</title>
       </Helmet>
       <Grid container className={classes.container} justify={"center"}>
-        <Grid item lg={5} xl={8}>
+        <Grid item lg={5}>
           {!isMobile && (
             <Grid container>
               <Grid item xs={4}>
@@ -166,7 +166,6 @@ function Home() {
           item
           xs={11}
           lg={5}
-          xl={8}
           className={classes.headingTextContainer}
         >
           <h1 className={classes.mainHeader}>
@@ -323,7 +322,7 @@ function Home() {
           </h6>
         </Grid>
 
-        <Grid item xs={11} lg={5} xl={6}>
+        <Grid item xs={11} lg={5}>
           <h1 className={classes.bottomHeader}>Well, what are you doing?</h1>
           <h3 className={classes.subHeader}>
             <span className={classes.highlightedText}>Adam Ginther</span> is
@@ -333,7 +332,7 @@ function Home() {
             </span>
           </h3>
         </Grid>
-        <Grid item xs={11} lg={5} xl={6}>
+        <Grid item xs={11} lg={5}>
           <SignUpForm />
         </Grid>
       </Grid>
