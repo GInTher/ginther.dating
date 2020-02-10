@@ -7,6 +7,7 @@ import { green, grey, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 const useStyles = makeStyles(theme => ({
   container: {
