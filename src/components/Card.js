@@ -162,7 +162,7 @@ function SignUpForm() {
             alt={obj.imageAlt}
             className={classes.image}
             loading={index < 3 && "eager"}
-            height={360}
+            height={isMobile ? 360 : 400}
           />
         </picture>
         <button
