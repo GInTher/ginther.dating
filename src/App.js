@@ -21,11 +21,9 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  // ReactGA.initialize("UA-158087755-1");
-  { GA.init() && <GA.RouteTracker /> }
-
   return (
     <Router history={history}>
+      { GA.init() && <GA.RouteTracker /> }
       <ThemeProvider theme={theme}>
         <Switch>
           <Route exact path="/" children={<Home />} />
