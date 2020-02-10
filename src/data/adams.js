@@ -125,7 +125,7 @@ export const Adams = [
     occupation: "Cowboy",
   },
   {
-    imageAlt: "Handsome man, doing a cool motorcycle trick.",
+    imageAlt: "Handsome man, doing a cool motorcycle trick!",
     imageSrc: daredevil,
     imageSrcWebp: daredevilWebp,
     occupation: "Daredevil",
