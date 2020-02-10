@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    position: "relative",
+    position: "relative"
   },
   card: {
     // boxShadow: `0 0 10px ${grey[500]}`,
@@ -119,7 +119,7 @@ function SignUpForm() {
     setMatched(true);
     // TODO: Pass down props properly instead of using forceUpdate
     forceUpdate();
-    localStorage.setItem(Adams[index].occupation, true)
+    localStorage.setItem(Adams[index].occupation, true);
   };
 
   const swipeLeft = () => {
@@ -132,6 +132,7 @@ function SignUpForm() {
     return obj.matched ? (
       <MatchedDialog
         imageSrc={obj.imageSrc}
+        imageSrcWebp={obj.imageSrcWebp}
         imageAlt={obj.imageAlt}
         occupation={obj.occupation}
         matched={matched}
@@ -145,11 +146,25 @@ function SignUpForm() {
         draggable={true}
       >
         <img
-          src={obj.imageSrc}
-          alt={obj.imageAlt}
-          className={classes.image}
-          loading={index < 3 && "eager"}
-        />
+            src={obj.imageSrc}
+            alt={obj.imageAlt}
+            className={classes.image}
+            loading={index < 3 && "eager"}
+          />
+        {/* <picture>
+          <source
+            type="image/webp"
+            src={obj.imageSrcWebp}
+            alt={obj.imageAlt}
+            loading={index < 3 && "eager"}
+          />
+          <img
+            src={obj.imageSrc}
+            alt={obj.imageAlt}
+            className={classes.image}
+            loading={index < 3 && "eager"}
+          />
+        </picture> */}
         <button
           className={`${classes.button} ${classes.swipeLeft}`}
           onClick={swipeLeft}

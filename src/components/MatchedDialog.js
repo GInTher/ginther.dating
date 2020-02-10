@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
   keepSwiping: {
     // TODO: Fix this spacing
     margin: "0 !important",
-    width: "100%",
+    width: "100%"
   },
   dialogActions: {
     flexDirection: "column",
@@ -103,11 +103,24 @@ function MatchedDialog(props) {
     >
       <DialogContent>
         <div className={classes.gradientBackground} />
+
         <img
-          src={props.imageSrc}
-          alt={props.imageAlt}
-          className={classes.image}
-        />
+            src={props.imageSrc}
+            alt={props.imageAlt}
+            className={classes.image}
+          />
+        {/* <picture>
+          <source
+            type="image/webp"
+            src={props.imageSrcWebp}
+            alt={props.imageAlt}
+          />
+          <img
+            src={props.imageSrc}
+            alt={props.imageAlt}
+            className={classes.image}
+          />
+        </picture> */}
         <Burst className={classes.burst} />
         <MatchBanner className={classes.matchBanner} />
 
@@ -126,7 +139,11 @@ function MatchedDialog(props) {
         >
           Send a message
         </Link>
-        <Button color="primary" className={classes.keepSwiping} onClick={closeDialog}>
+        <Button
+          color="primary"
+          className={classes.keepSwiping}
+          onClick={closeDialog}
+        >
           Keep Swiping
         </Button>
       </DialogActions>
