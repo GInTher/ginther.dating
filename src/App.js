@@ -17,6 +17,8 @@ import {
 
 const history = createBrowserHistory();
 
+ReactGA.initialize("UA-158087755-1");
+
 history.listen(location => {
   ReactGA.set({ page: location.pathname }); // Update the user's current page
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
@@ -29,8 +31,6 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  ReactGA.initialize("UA-158087755-1");
-
   return (
     <Router history={history}>
       <ThemeProvider theme={theme}>
