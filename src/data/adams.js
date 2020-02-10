@@ -116,7 +116,7 @@ export const Adams = [
     bio: "I'm sure we'll have great chemistry!"
   },
   {
-    imageAlt: "Handsome man, with a lot of money.",
+    imageAlt: "Handsome man, with lots of money.",
     imageSrc: millionaire,
     occupation: "Millionaire",
   },
