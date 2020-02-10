@@ -201,9 +201,6 @@ function Home() {
                   <source
                     srcSet={stayAtHomeSonMobileBannerWebp}
                     type="image/webp"
-                    alt={""}
-                    className={classes.appBanner}
-                    loading={"eager"}
                   />
                   <img
                     src={stayAtHomeSonMobileBanner}
@@ -218,9 +215,6 @@ function Home() {
                   <source
                     srcSet={pokerPlayerMobileBannerWebp}
                     type="image/webp"
-                    alt={""}
-                    className={classes.appBanner}
-                    loading={"eager"}
                   />
                   <img
                     src={pokerPlayerMobileBanner}
@@ -235,9 +229,6 @@ function Home() {
                   <source
                     srcSet={streetFighterMobileBannerWebp}
                     type="image/webp"
-                    alt={""}
-                    
-                    loading={"eager"}
                   />
                   <img
                     src={streetFighterMobileBanner}
@@ -251,8 +242,6 @@ function Home() {
                   <source
                     srcSet={millionaireMobileBannerWebp}
                     type="image/webp"
-                    alt={""}
-                    className={`${classes.appBanner} ${classes.floatRight}`}
                   />
                   <img
                     src={millionaireMobileBanner}
@@ -281,7 +270,6 @@ function Home() {
             <source
               srcSet={fianceWebp}
               type="image/webp"
-              alt={"A lady getting engaged."}
             />
             <img
               src={fiance}
@@ -302,7 +290,6 @@ function Home() {
             <source
               srcSet={momWebp}
               type="image/webp"
-              alt={"A handsome man and his mom."}
             />
             <img
               src={mom}
@@ -322,7 +309,6 @@ function Home() {
             <source
               srcSet={womanWebp}
               type="image/webp"
-              alt={"Girl shrugging"}
             />
             <img src={woman} alt={"Girl shrugging"} className={classes.image} />
           </picture>

@@ -54,10 +54,11 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     borderRadius: theme.spacing(2, 2, 0, 0),
+    background: grey[300],
     display: "block",
     width: "100%",
     minHeight: "280px",
-    pointerEvents: "none"
+    pointerEvents: "none",
   },
   burst: {
     left: 0,
@@ -104,6 +105,10 @@ const useStyles = makeStyles(theme => ({
 
     "&:hover": {
       textDecoration: "underline"
+    },
+
+    "&:focus": {
+      textDecoration: "underline"
     }
   }
 }));
@@ -145,24 +150,18 @@ function SignUpForm() {
         onDragStart={() => swipeRight(index)}
         draggable={true}
       >
-        {/* <img
-            src={obj.imageSrc}
-            alt={obj.imageAlt}
-            className={classes.image}
-            loading={index < 3 && "eager"}
-          /> */}
         <picture>
           <source
             type="image/webp"
             srcSet={obj.imageSrcWebp}
-            alt={obj.imageAlt}
-            loading={index < 3 && "eager"}
           />
+          {/* TODO: Find a better way to dynamically update height */}
           <img
             src={obj.imageSrc}
             alt={obj.imageAlt}
             className={classes.image}
             loading={index < 3 && "eager"}
+            height={360}
           />
         </picture>
         <button

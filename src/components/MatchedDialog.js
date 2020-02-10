@@ -107,7 +107,6 @@ function MatchedDialog(props) {
           <source
             type="image/webp"
             srcSet={props.imageSrcWebp}
-            alt={props.imageAlt}
           />
           <img
             src={props.imageSrc}
