@@ -22,14 +22,18 @@ import firefighter from "../images/occupations/fire-fighter.jpg";
 import fisher from "../images/occupations/fisher.jpg";
 import hacker from "../images/occupations/hacker.jpg";
 import hitman from "../images/occupations/hitman.jpg";
+import knight from "../images/occupations/knight.jpg";
 import lumberjack from "../images/occupations/lumberjack.jpg";
 import madScientist from "../images/occupations/mad-scientist.jpg";
+import magician from "../images/occupations/magician.jpg";
 import mobBoss from "../images/occupations/mob-boss.jpg";
 import millionaire from "../images/occupations/millionaire.jpg";
 import newsAnchor from "../images/occupations/news-anchor.jpg";
 import ninja from "../images/occupations/ninja.jpg";
+import pickpocket from "../images/occupations/pickpocket.jpg";
 import pokerPlayer from "../images/occupations/poker-player.jpg";
 import poleDancer from "../images/occupations/pole-dancer.jpg";
+import politician from "../images/occupations/politician.jpg";
 import proGamer from "../images/occupations/pro-gamer.jpg";
 import rapper from "../images/occupations/rapper.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
@@ -64,14 +68,18 @@ import firefighterWebp from "../images/occupations/fire-fighter.webp";
 import fisherWebp from "../images/occupations/fisher.webp";
 import hackerWebp from "../images/occupations/hacker.webp";
 import hitmanWebp from "../images/occupations/hitman.webp";
+import knightWebp from "../images/occupations/knight.webp";
 import lumberjackWebp from "../images/occupations/lumberjack.webp";
 import madScientistWebp from "../images/occupations/mad-scientist.webp";
+import magicianWebp from "../images/occupations/magician.webp";
 import mobBossWebp from "../images/occupations/mob-boss.webp";
 import millionaireWebp from "../images/occupations/millionaire.webp";
 import newsAnchorWebp from "../images/occupations/news-anchor.webp";
 import ninjaWebp from "../images/occupations/ninja.webp";
+import pickpocketWebp from "../images/occupations/pickpocket.webp";
 import pokerPlayerWebp from "../images/occupations/poker-player.webp";
 import poleDancerWebp from "../images/occupations/pole-dancer.webp";
+import politicianWebp from "../images/occupations/politician.webp";
 import proGamerWebp from "../images/occupations/pro-gamer.webp";
 import rapperWebp from "../images/occupations/rapper.webp";
 import rockstarWebp from "../images/occupations/rockstar.webp";
@@ -227,6 +235,12 @@ export const Adams = [
     occupation: "Hitman",
   },
   {
+    imageAlt: "Handsome man, being your knight in shining armor.",
+    imageSrc: knight,
+    imageSrcWebp: knightWebp,
+    occupation: "Knight",
+  },
+  {
     imageAlt: "A handsome lumberjack.",
     imageSrc: lumberjack,
     imageSrcWebp: lumberjackWebp,
@@ -238,6 +252,12 @@ export const Adams = [
     imageSrcWebp: madScientistWebp,
     occupation: "Mad Scientist",
     bio: "I'm sure we'll have great chemistry!"
+  },
+  {
+    imageAlt: "Handsome man, performing some CRAZY magic.",
+    imageSrc: magician,
+    imageSrcWebp: magicianWebp,
+    occupation: "Magician",
   },
   {
     imageAlt: "Handsome man, with lots of money.",
@@ -265,6 +285,12 @@ export const Adams = [
     bio: "How I gained your love and affection, tonight at 7!"
   },
   {
+    imageAlt: "Handsome man, stealing a wallet with a lot of money.",
+    imageSrc: pickpocket,
+    imageSrcWebp: pickpocketWebp,
+    occupation: "Pickpocket",
+  },
+  {
     imageAlt: "Handsome man, playing poker.",
     imageSrc: pokerPlayer,
     imageSrcWebp: pokerPlayerWebp,
@@ -282,6 +308,12 @@ export const Adams = [
     imageSrcWebp: copWebp,
     occupation: "Police Officer",
     bio: "I'll always have an extra pair of handcuffs for you."
+  },
+  {
+    imageAlt: "Handsome man, doing some crazy politics.",
+    imageSrc: politician,
+    imageSrcWebp: politicianWebp,
+    occupation: "Politician",
   },
   {
     imageAlt: "Handsome gamer, in a VR headset.",
