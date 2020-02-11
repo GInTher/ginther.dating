@@ -1,10 +1,14 @@
 import engineer from "../images/occupations/engineer.jpg";
+import acrobat from "../images/occupations/acrobat.jpg";
 import assistantRegionalManager from "../images/occupations/assistant-regional-manager.jpg";
+import ballroomDancer from "../images/occupations/ballroom-dancer.jpg";
 import bankRobber from "../images/occupations/bank-robber.jpg";
 import bartender from "../images/occupations/bartender.jpg";
 import basketballPlayer from "../images/occupations/basketball-player.jpg";
 import bodybuilder from "../images/occupations/bodybuilder.jpg";
 import boxer from "../images/occupations/boxer.jpg";
+import breakDancer from "../images/occupations/break-dancer.jpg";
+import busker from "../images/occupations/busker.jpg";
 import chef from "../images/occupations/chef.jpg";
 import collegeStudent from "../images/occupations/college-student.jpg";
 import cop from "../images/occupations/cop.jpg";
@@ -31,12 +35,16 @@ import yogaInstructor from "../images/occupations/yoga-instructor.jpg";
 
 // TODO: Find a better way of defining these images
 import engineerWebp from "../images/occupations/engineer.webp";
+import acrobatWebp from "../images/occupations/acrobat.webp";
 import assistantRegionalManagerWebp from "../images/occupations/assistant-regional-manager.webp";
+import ballroomDancerWebp from "../images/occupations/ballroom-dancer.webp";
 import bankRobberWebp from "../images/occupations/bank-robber.webp";
 import bartenderWebp from "../images/occupations/bartender.webp";
 import basketballPlayerWebp from "../images/occupations/basketball-player.webp";
 import bodybuilderWebp from "../images/occupations/bodybuilder.webp";
 import boxerWebp from "../images/occupations/boxer.webp";
+import breakDancerWebp from "../images/occupations/break-dancer.webp";
+import buskerWebp from "../images/occupations/busker.webp";
 import chefWebp from "../images/occupations/chef.webp";
 import collegeStudentWebp from "../images/occupations/college-student.webp";
 import copWebp from "../images/occupations/cop.webp";
@@ -68,11 +76,24 @@ export const Adams = [
     occupation: "Software Engineer",
   },
   {
+    imageAlt: "Handsome man riding a unicycle across a very small line.",
+    imageSrc: acrobat,
+    imageSrcWebp: acrobatWebp,
+    occupation: "Acrobat",
+    bio: "Is it a beet season? Because you look ripe and ready for picking."
+  },
+  {
     imageAlt: "Handsome assistant to the regional manager of Dunder Mifflin Paper Company.",
     imageSrc: assistantRegionalManager,
     imageSrcWebp: assistantRegionalManagerWebp,
     occupation: "Assistant to the Regional Manager",
     bio: "Is it a beet season? Because you look ripe and ready for picking."
+  },
+  {
+    imageAlt: "A handsome man dancing with a woman.",
+    imageSrc: ballroomDancer,
+    imageSrcWebp: ballroomDancerWebp,
+    occupation: "Ballroom Dancer",
   },
   {
     imageAlt: "Handsome man, with a big bag of money.",
@@ -105,6 +126,18 @@ export const Adams = [
     imageSrcWebp: boxerWebp,
     occupation: "Boxer",
     bio: "I look good in boxers too!"
+  },
+  {
+    imageAlt: "Handsome man doing a totally cool break dancing trick.",
+    imageSrc: breakDancer,
+    imageSrcWebp: breakDancerWebp,
+    occupation: "Break Dancer",
+  },
+  {
+    imageAlt: "Handsome man playing the saxophone on the street.",
+    imageSrc: busker,
+    imageSrcWebp: buskerWebp,
+    occupation: "Busker",
   },
   {
     imageAlt: "Handsome man, serving a salad.",
