@@ -11,12 +11,17 @@ import breakDancer from "../images/occupations/break-dancer.jpg";
 import busker from "../images/occupations/busker.jpg";
 import chef from "../images/occupations/chef.jpg";
 import collegeStudent from "../images/occupations/college-student.jpg";
+import conArtist from "../images/occupations/con-artist.jpg";
 import cop from "../images/occupations/cop.jpg";
 import cowboy from "../images/occupations/cowboy.jpg";
 import daredevil from "../images/occupations/daredevil.jpg";
 import detective from "../images/occupations/detective.jpg";
 import dj from "../images/occupations/dj.jpg";
+import drugDealer from "../images/occupations/drug-dealer.jpg";
 import firefighter from "../images/occupations/fire-fighter.jpg";
+import fisher from "../images/occupations/fisher.jpg";
+import hacker from "../images/occupations/hacker.jpg";
+import hitman from "../images/occupations/hitman.jpg";
 import lumberjack from "../images/occupations/lumberjack.jpg";
 import madScientist from "../images/occupations/mad-scientist.jpg";
 import mobBoss from "../images/occupations/mob-boss.jpg";
@@ -47,12 +52,17 @@ import breakDancerWebp from "../images/occupations/break-dancer.webp";
 import buskerWebp from "../images/occupations/busker.webp";
 import chefWebp from "../images/occupations/chef.webp";
 import collegeStudentWebp from "../images/occupations/college-student.webp";
+import conArtistWebp from "../images/occupations/con-artist.webp";
 import copWebp from "../images/occupations/cop.webp";
 import cowboyWebp from "../images/occupations/cowboy.webp";
 import daredevilWebp from "../images/occupations/daredevil.webp";
 import detectiveWebp from "../images/occupations/detective.webp";
 import djWebp from "../images/occupations/dj.webp";
+import drugDealerWebp from "../images/occupations/drug-dealer.webp";
 import firefighterWebp from "../images/occupations/fire-fighter.webp";
+import fisherWebp from "../images/occupations/fisher.webp";
+import hackerWebp from "../images/occupations/hacker.webp";
+import hitmanWebp from "../images/occupations/hitman.webp";
 import lumberjackWebp from "../images/occupations/lumberjack.webp";
 import madScientistWebp from "../images/occupations/mad-scientist.webp";
 import mobBossWebp from "../images/occupations/mob-boss.webp";
@@ -153,6 +163,12 @@ export const Adams = [
     bio: "Will be able to study you very well."
   },
   {
+    imageAlt: "Handsome man, in jail.",
+    imageSrc: conArtist,
+    imageSrcWebp: conArtistWebp,
+    occupation: "Con Artist",
+  },
+  {
     imageAlt: "Handsome cowboy, about to lassoo you.",
     imageSrc: cowboy,
     imageSrcWebp: cowboyWebp,
@@ -178,11 +194,35 @@ export const Adams = [
     occupation: "DJ",
   },
   {
+    imageAlt: "Handsome man, offering you drugs.",
+    imageSrc: drugDealer,
+    imageSrcWebp: drugDealerWebp,
+    occupation: "Drug Dealer",
+  },
+  {
     imageAlt: "Handsome man, also saving a child.",
     imageSrc: firefighter,
     imageSrcWebp: firefighterWebp,
     occupation: "Firefighter",
     bio: "The only thing that's hotter than the fires I save people from is you."
+  },
+  {
+    imageAlt: "Handsome man, also catching some fish.",
+    imageSrc: fisher,
+    imageSrcWebp: fisherWebp,
+    occupation: "Fisherman",
+  },
+  {
+    imageAlt: "Handsome man, about to hack your computer.",
+    imageSrc: hacker,
+    imageSrcWebp: hackerWebp,
+    occupation: "Hacker",
+  },
+  {
+    imageAlt: "Handsome man, about to 360 no-scope someone.",
+    imageSrc: hitman,
+    imageSrcWebp: hitmanWebp,
+    occupation: "Hitman",
   },
   {
     imageAlt: "A handsome lumberjack.",
