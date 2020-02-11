@@ -30,6 +30,7 @@ import newsAnchor from "../images/occupations/news-anchor.jpg";
 import ninja from "../images/occupations/ninja.jpg";
 import pokerPlayer from "../images/occupations/poker-player.jpg";
 import poleDancer from "../images/occupations/pole-dancer.jpg";
+import proGamer from "../images/occupations/pro-gamer.jpg";
 import rapper from "../images/occupations/rapper.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
 import stayAtHomeFather from "../images/occupations/stay-at-home-father.jpg";
@@ -71,6 +72,7 @@ import newsAnchorWebp from "../images/occupations/news-anchor.webp";
 import ninjaWebp from "../images/occupations/ninja.webp";
 import pokerPlayerWebp from "../images/occupations/poker-player.webp";
 import poleDancerWebp from "../images/occupations/pole-dancer.webp";
+import proGamerWebp from "../images/occupations/pro-gamer.webp";
 import rapperWebp from "../images/occupations/rapper.webp";
 import rockstarWebp from "../images/occupations/rockstar.webp";
 import stayAtHomeFatherWebp from "../images/occupations/stay-at-home-father.webp";
@@ -280,6 +282,13 @@ export const Adams = [
     imageSrcWebp: copWebp,
     occupation: "Police Officer",
     bio: "I'll always have an extra pair of handcuffs for you."
+  },
+  {
+    imageAlt: "Handsome gamer, in a VR headset.",
+    imageSrc: proGamer,
+    imageSrcWebp: proGamerWebp,
+    occupation: "Pro Gamer",
+    bio: "Won't play any games with you."
   },
   {
     imageAlt: "Handsome rapper, with a beatbox.",
