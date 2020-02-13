@@ -27,6 +27,10 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  React.useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
+
   return (
     <Router history={history}>
       <ThemeProvider theme={theme}>
