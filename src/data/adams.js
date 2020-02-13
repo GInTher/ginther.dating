@@ -36,12 +36,14 @@ import poleDancer from "../images/occupations/pole-dancer.jpg";
 import politician from "../images/occupations/politician.jpg";
 import proGamer from "../images/occupations/pro-gamer.jpg";
 import rapper from "../images/occupations/rapper.jpg";
+import realityTvStar from "../images/occupations/reality-tv-star.jpg";
 import rockClimber from "../images/occupations/rock-climber.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
 import shipCaptain from "../images/occupations/ship-captain.jpg";
 import stayAtHomeFather from "../images/occupations/stay-at-home-father.jpg";
 import stayAtHomeSon from "../images/occupations/stay-at-home-son.jpg";
 import streetFighter from "../images/occupations/street-fighter.jpg";
+import vegan from "../images/occupations/vegan.jpg";
 import yogaInstructor from "../images/occupations/yoga-instructor.jpg";
 
 
@@ -86,10 +88,12 @@ import proGamerWebp from "../images/occupations/pro-gamer.webp";
 import rapperWebp from "../images/occupations/rapper.webp";
 import rockClimberWebp from "../images/occupations/rock-climber.webp";
 import rockstarWebp from "../images/occupations/rockstar.webp";
+import realityTvStarWebp from "../images/occupations/reality-tv-star.webp";
 import shipCaptainWebp from "../images/occupations/ship-captain.webp";
 import stayAtHomeFatherWebp from "../images/occupations/stay-at-home-father.webp";
 import stayAtHomeSonWebp from "../images/occupations/stay-at-home-son.webp";
 import streetFighterWebp from "../images/occupations/street-fighter.webp";
+import veganWebp from "../images/occupations/vegan.webp";
 import yogaInstructorWebp from "../images/occupations/yoga-instructor.webp";
 
 export const Adams = [
@@ -327,6 +331,12 @@ export const Adams = [
     bio: "Won't play any games with you."
   },
   {
+    imageAlt: "A handsome man offering a girl a rose.",
+    imageSrc: realityTvStar,
+    imageSrcWebp: realityTvStarWebp,
+    occupation: "Reality TV Star",
+  },
+  {
     imageAlt: "Handsome man, climbing an epic mountain.",
     imageSrc: rockClimber,
     imageSrcWebp: rockClimberWebp,
@@ -369,6 +379,12 @@ export const Adams = [
     imageSrc: streetFighter,
     imageSrcWebp: streetFighterWebp,
     occupation: "Street Fighter",
+  },
+  {
+    imageAlt: "A handsome man eating a carrot, refusing steak.",
+    imageSrc: vegan,
+    imageSrcWebp: veganWebp,
+    occupation: "Vegan",
   },
   {
     imageAlt: "A handsome man teaching yoga.",

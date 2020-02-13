@@ -8,145 +8,142 @@ import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
 import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function SignUpForm() {
+  const isSmallPhone = useMediaQuery("(max-width:350px)");
 
-  const isSmallPhone = useMediaQuery('(max-width:350px)');
-
-const useStyles = makeStyles(theme => ({
-  container: {
-    position: "relative"
-  },
-  card: {
-    minHeight: "400px",
-    marginTop: theme.spacing(1),
-    position: "absolute",
-    cursor: "pointer",
-    textAlign: "center",
-    borderRadius: theme.spacing(2),
-    left: 0,
-    right: 0,
-    margin: "0 auto",
-    maxWidth: "400px",
-    background: "#fff",
-    userSelect: "none",
-    top: isSmallPhone ? "-93px" : 0,
-    
-    
-    "&:first-child": {
-      zIndex: 3
+  const useStyles = makeStyles(theme => ({
+    container: {
+      position: "relative"
     },
-    "&:nth-child(2)": {
-      top: isSmallPhone ? "-73px" : theme.spacing(3),
-      zIndex: 2,
-      opacity: 0.9,
-      transform: "scale(0.95)",
-      background: "#eee",
+    card: {
+      minHeight: "400px",
+      marginTop: theme.spacing(1),
+      position: "absolute",
+      cursor: "pointer",
+      textAlign: "center",
+      borderRadius: theme.spacing(2),
+      left: 0,
+      right: 0,
+      margin: "0 auto",
+      maxWidth: "400px",
+      background: "#fff",
+      userSelect: "none",
+      top: isSmallPhone ? "-93px" : 0,
+
+      "&:first-child": {
+        zIndex: 3
+      },
+      "&:nth-child(2)": {
+        top: isSmallPhone ? "-73px" : theme.spacing(3),
+        zIndex: 2,
+        opacity: 0.9,
+        transform: "scale(0.95)",
+        background: "#eee",
+        pointerEvents: "none"
+      },
+      "&:nth-child(3)": {
+        top: isSmallPhone ? "-52px" : theme.spacing(6),
+        zIndex: 1,
+        opacity: 0.5,
+        transform: "scale(0.89)",
+        background: "#ddd",
+        pointerEvents: "none"
+      }
+    },
+    name: {
+      marginBottom: 0
+    },
+    occupation: {
+      margin: theme.spacing(1, 0, 3)
+    },
+    image: {
+      borderRadius: theme.spacing(2, 2, 0, 0),
+      background: grey[300],
+      display: "block",
+      width: "100%",
+      minHeight: "280px",
       pointerEvents: "none"
     },
-    "&:nth-child(3)": {
-      top: isSmallPhone ? "-52px" : theme.spacing(6),
-      zIndex: 1,
-      opacity: 0.5,
-      transform: "scale(0.89)",
-      background: "#ddd",
-      pointerEvents: "none"
-    }
-  },
-  name: {
-    marginBottom: 0
-  },
-  occupation: {
-    margin: theme.spacing(1, 0, 3)
-  },
-  image: {
-    borderRadius: theme.spacing(2, 2, 0, 0),
-    background: grey[300],
-    display: "block",
-    width: "100%",
-    minHeight: "280px",
-    pointerEvents: "none"
-  },
-  burst: {
-    left: 0,
-    position: "absolute",
-    top: 0,
-    width: "100%"
-  },
-  button: {
-    background: "#fff",
-    position: "absolute",
-    border: `1px solid ${grey[400]}`,
-    padding: theme.spacing(2),
-    cursor: "pointer",
-    borderRadius: "50%",
-    boxShadow: `0 0 4px ${grey[400]}`,
-    transform: "translateY(-50%)"
-  },
-  swipeLeft: {
-    left: theme.spacing(4),
-    color: red[400]
-  },
-  swipeRight: {
-    right: theme.spacing(4),
-    color: green[400],
-    "& svg": {
-      fill:
-        "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)"
-    }
-  },
-  rotateRight: {
-    transform: "rotate(-30deg) scale(0.8)",
-    transition: "1s",
-    opacity: 0,
-    cursor: "w-resize",
-    zIndex: 10
-  },
-  completeContainer: {
-    color: "#fff"
-  },
-  link: {
-    color: "#fff",
-    fontWeight: 800,
-    textDecoration: "none",
-
-    "&:hover": {
-      textDecoration: "underline"
+    burst: {
+      left: 0,
+      position: "absolute",
+      top: 0,
+      width: "100%"
     },
-
-    "&:focus": {
-      textDecoration: "underline"
-    }
-  },
-  nameLink: {
-    color: "#fff",
-    fontWeight: 800,
-    textDecoration: "underline",
-    marginLeft: theme.spacing(0.5),
-
-    "&:hover": {
-      textDecoration: "underline"
+    button: {
+      background: "#fff",
+      position: "absolute",
+      border: `1px solid ${grey[400]}`,
+      padding: theme.spacing(2),
+      cursor: "pointer",
+      borderRadius: "50%",
+      boxShadow: `0 0 4px ${grey[400]}`,
+      transform: "translateY(-50%)"
     },
+    swipeLeft: {
+      left: theme.spacing(4),
+      color: red[400]
+    },
+    swipeRight: {
+      right: theme.spacing(4),
+      color: green[400],
+      "& svg": {
+        fill:
+          "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)"
+      }
+    },
+    rotateRight: {
+      transform: "rotate(-30deg) scale(0.8)",
+      transition: "1s",
+      opacity: 0,
+      cursor: "w-resize",
+      zIndex: 10
+    },
+    completeContainer: {
+      color: "#fff"
+    },
+    link: {
+      color: "#fff",
+      fontWeight: 800,
+      textDecoration: "none",
 
-    "&:focus": {
-      textDecoration: "underline"
+      "&:hover": {
+        textDecoration: "underline"
+      },
+
+      "&:focus": {
+        textDecoration: "underline"
+      }
+    },
+    nameLink: {
+      color: "#fff",
+      fontWeight: 800,
+      textDecoration: "underline",
+      marginLeft: theme.spacing(0.5),
+
+      "&:hover": {
+        textDecoration: "underline"
+      },
+
+      "&:focus": {
+        textDecoration: "underline"
+      }
+    },
+    madeWithLoveContainer: {
+      textAlign: "center",
+      marginTop: theme.spacing(10),
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    },
+    heartIcon: {
+      fontSize: "35px",
+      display: "inline-block",
+      margin: theme.spacing(0, 1)
     }
-  },
-  madeWithLoveContainer: {
-    textAlign: "center",
-    marginTop: theme.spacing(10),
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  heartIcon: {
-    fontSize: "35px",
-    display: "inline-block",
-    margin: theme.spacing(0, 1)
-  }
-}));
+  }));
 
   const forceUpdate = useForceUpdate();
   const classes = useStyles();
