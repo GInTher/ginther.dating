@@ -12,12 +12,9 @@ import ReactGA from "react-ga";
 import createHistory from "history/createBrowserHistory";
 
 const history = createHistory();
-ReactGA.initialize("UA-158087755-1", {
-  debug: true
-});
+ReactGA.initialize("UA-158087755-1");
 history.listen(location => {
   ReactGA.pageview(location.pathname + location.search);
-  console.log(location.pathname);
 });
 
 const theme = createMuiTheme({
