@@ -148,7 +148,8 @@ function SignUpForm() {
   const forceUpdate = useForceUpdate();
   const classes = useStyles();
 
-  const [matched, setMatched] = React.useState(Adams);
+  // Do not set state to Adams, otherwise it will bug out
+  const [matched, setMatched] = React.useState();
 
   const swipeRight = index => {
     Adams[index].matched = true;
