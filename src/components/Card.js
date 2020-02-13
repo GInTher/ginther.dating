@@ -8,13 +8,18 @@ import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
 import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+
+function SignUpForm() {
+
+  const isSmallPhone = useMediaQuery('(max-width:350px)');
 
 const useStyles = makeStyles(theme => ({
   container: {
     position: "relative"
   },
   card: {
-    // boxShadow: `0 0 10px ${grey[500]}`,
     minHeight: "400px",
     marginTop: theme.spacing(1),
     position: "absolute",
@@ -27,11 +32,14 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "400px",
     background: "#fff",
     userSelect: "none",
+    top: isSmallPhone ? "-93px" : 0,
+    
+    
     "&:first-child": {
       zIndex: 3
     },
     "&:nth-child(2)": {
-      top: theme.spacing(3),
+      top: isSmallPhone ? "-73px" : theme.spacing(3),
       zIndex: 2,
       opacity: 0.9,
       transform: "scale(0.95)",
@@ -39,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       pointerEvents: "none"
     },
     "&:nth-child(3)": {
-      top: theme.spacing(6),
+      top: isSmallPhone ? "-52px" : theme.spacing(6),
       zIndex: 1,
       opacity: 0.5,
       transform: "scale(0.89)",
@@ -140,7 +148,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function SignUpForm() {
   const forceUpdate = useForceUpdate();
   const classes = useStyles();
 
