@@ -8,10 +8,19 @@ import SendMessage from "./pages/SendMessage";
 import { Adams } from "./data/adams";
 import { pink } from "@material-ui/core/colors";
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Switch
 } from "react-router-dom";
+import ReactGA from 'react-ga';
+import createHistory from 'history/createBrowserHistory'
+
+const history = createHistory()
+ReactGA.initialize('UA-158087755-1');
+history.listen((location, action) => {
+    ReactGA.pageview(location.pathname + location.search);
+    console.log(location.pathname)
+});
 
 const theme = createMuiTheme({
   palette: {
@@ -21,7 +30,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <ThemeProvider theme={theme}>
         <Switch>
           <Route exact path="/" children={<Home />} />
