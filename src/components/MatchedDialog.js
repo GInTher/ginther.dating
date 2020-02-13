@@ -34,7 +34,8 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     zIndex: 2,
     display: "block",
-    margin: "0 auto"
+    margin: "0 auto",
+    width: "100%"
   },
   occupation: {
     textAlign: "center",
