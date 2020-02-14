@@ -11,10 +11,12 @@ import breakDancer from "../images/occupations/break-dancer.jpg";
 import busker from "../images/occupations/busker.jpg";
 import chef from "../images/occupations/chef.jpg";
 import collegeStudent from "../images/occupations/college-student.jpg";
+import composer from "../images/occupations/composer.jpg";
 import conArtist from "../images/occupations/con-artist.jpg";
 import cop from "../images/occupations/cop.jpg";
 import cowboy from "../images/occupations/cowboy.jpg";
 import daredevil from "../images/occupations/daredevil.jpg";
+import dentist from "../images/occupations/dentist.jpg";
 import detective from "../images/occupations/detective.jpg";
 import dj from "../images/occupations/dj.jpg";
 import drugDealer from "../images/occupations/drug-dealer.jpg";
@@ -40,9 +42,12 @@ import realityTvStar from "../images/occupations/reality-tv-star.jpg";
 import rockClimber from "../images/occupations/rock-climber.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
 import shipCaptain from "../images/occupations/ship-captain.jpg";
+import skateboarder from "../images/occupations/skateboarder.jpg";
+import standupComedian from "../images/occupations/standup-comedian.jpg";
 import stayAtHomeFather from "../images/occupations/stay-at-home-father.jpg";
 import stayAtHomeSon from "../images/occupations/stay-at-home-son.jpg";
 import streetFighter from "../images/occupations/street-fighter.jpg";
+import superModel from "../images/occupations/supermodel.jpg";
 import vegan from "../images/occupations/vegan.jpg";
 import yogaInstructor from "../images/occupations/yoga-instructor.jpg";
 
@@ -61,10 +66,12 @@ import breakDancerWebp from "../images/occupations/break-dancer.webp";
 import buskerWebp from "../images/occupations/busker.webp";
 import chefWebp from "../images/occupations/chef.webp";
 import collegeStudentWebp from "../images/occupations/college-student.webp";
+import composerWebp from "../images/occupations/composer.webp";
 import conArtistWebp from "../images/occupations/con-artist.webp";
 import copWebp from "../images/occupations/cop.webp";
 import cowboyWebp from "../images/occupations/cowboy.webp";
 import daredevilWebp from "../images/occupations/daredevil.webp";
+import dentistWebp from "../images/occupations/dentist.webp";
 import detectiveWebp from "../images/occupations/detective.webp";
 import djWebp from "../images/occupations/dj.webp";
 import drugDealerWebp from "../images/occupations/drug-dealer.webp";
@@ -90,9 +97,12 @@ import rockClimberWebp from "../images/occupations/rock-climber.webp";
 import rockstarWebp from "../images/occupations/rockstar.webp";
 import realityTvStarWebp from "../images/occupations/reality-tv-star.webp";
 import shipCaptainWebp from "../images/occupations/ship-captain.webp";
+import skateboarderWebp from "../images/occupations/skateboarder.webp";
+import standupComedianWebp from "../images/occupations/standup-comedian.webp";
 import stayAtHomeFatherWebp from "../images/occupations/stay-at-home-father.webp";
 import stayAtHomeSonWebp from "../images/occupations/stay-at-home-son.webp";
 import streetFighterWebp from "../images/occupations/street-fighter.webp";
+import supermodelWebp from "../images/occupations/supermodel.webp";
 import veganWebp from "../images/occupations/vegan.webp";
 import yogaInstructorWebp from "../images/occupations/yoga-instructor.webp";
 
@@ -181,6 +191,12 @@ export const Adams = [
     bio: "Will be able to study you very well."
   },
   {
+    imageAlt: "Handsome man, composing some epic music.",
+    imageSrc: composer,
+    imageSrcWebp: composerWebp,
+    occupation: "Composer",
+  },
+  {
     imageAlt: "Handsome man, in jail.",
     imageSrc: conArtist,
     imageSrcWebp: conArtistWebp,
@@ -197,6 +213,12 @@ export const Adams = [
     imageSrc: daredevil,
     imageSrcWebp: daredevilWebp,
     occupation: "Daredevil",
+  },
+  {
+    imageAlt: "Handsome man, being a great dentist.",
+    imageSrc: dentist,
+    imageSrcWebp: dentistWebp,
+    occupation: "Dentist",
   },
   {
     imageAlt: "Handsome man, being a great detective.",
@@ -355,10 +377,22 @@ export const Adams = [
     occupation: "Ship Captain",
   },
   {
+    imageAlt: "Handsome skateboarder, doing an epic trick.",
+    imageSrc: skateboarder,
+    imageSrcWebp: skateboarderWebp,
+    occupation: "Skateboarder",
+  },
+  {
     imageAlt: "Handsome rapper, with a beatbox.",
     imageSrc: rapper,
     imageSrcWebp: rapperWebp,
     occupation: "Soundcloud Rapper",
+  },
+  {
+    imageAlt: "Handsome man, doing stand-up comedy.",
+    imageSrc: standupComedian,
+    imageSrcWebp: standupComedianWebp,
+    occupation: "Stand-up Comedian",
   },
   {
     imageAlt: "Handsome man, with his children.",
@@ -379,6 +413,12 @@ export const Adams = [
     imageSrc: streetFighter,
     imageSrcWebp: streetFighterWebp,
     occupation: "Street Fighter",
+  },
+  {
+    imageAlt: "A handsome supermodel.",
+    imageSrc: superModel,
+    imageSrcWebp: supermodelWebp,
+    occupation: "Super Model",
   },
   {
     imageAlt: "A handsome man eating a carrot, refusing steak.",
