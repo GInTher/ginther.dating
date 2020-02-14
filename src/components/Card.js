@@ -2,13 +2,14 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/";
 import MatchedDialog from "./MatchedDialog";
 import useForceUpdate from "use-force-update";
-import { Favorite, Close } from "@material-ui/icons";
-import { green, grey, red } from "@material-ui/core/colors";
+import { Favorite, Close, Star } from "@material-ui/icons";
+import { green, grey, blue, red } from "@material-ui/core/colors";
 import { Adams } from "../data/adams";
 import { rejectedMessages } from "../data/rejectedMessages";
 import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import superLikeAudio from "../audio/super-like.mp3";
 
 function SignUpForm() {
   const isSmallPhone = useMediaQuery("(max-width:350px)");
@@ -30,13 +31,13 @@ function SignUpForm() {
       maxWidth: "400px",
       background: "#fff",
       userSelect: "none",
-      top: isSmallPhone ? "-93px" : 0,
+      top: isSmallPhone ? "-70px" : 0,
 
       "&:first-child": {
         zIndex: 3
       },
       "&:nth-child(2)": {
-        top: isSmallPhone ? "-73px" : theme.spacing(3),
+        top: isSmallPhone ? "-52px" : theme.spacing(3),
         zIndex: 2,
         opacity: 0.9,
         transform: "scale(0.95)",
@@ -44,7 +45,7 @@ function SignUpForm() {
         pointerEvents: "none"
       },
       "&:nth-child(3)": {
-        top: isSmallPhone ? "-52px" : theme.spacing(6),
+        top: isSmallPhone ? "-30px" : theme.spacing(6),
         zIndex: 1,
         opacity: 0.5,
         transform: "scale(0.89)",
@@ -53,10 +54,11 @@ function SignUpForm() {
       }
     },
     name: {
-      marginBottom: 0
+      marginBottom: 0,
+      marginTop: theme.spacing(4)
     },
     occupation: {
-      margin: theme.spacing(1, 0, 3)
+      margin: theme.spacing(0.5, 0, 3)
     },
     image: {
       borderRadius: theme.spacing(2, 2, 0, 0),
@@ -93,6 +95,16 @@ function SignUpForm() {
         fill:
           "linear-gradient(90deg, rgba(251,110,63,1) 0%, rgba(252,70,226,1) 100%)"
       }
+    },
+    superLike: {
+      color: blue[400],
+      padding: theme.spacing(1),
+      marginLeft: "auto",
+      marginRight: "auto",
+      left: 0,
+      right: 0,
+      maxWidth: theme.spacing(5.5),
+      transform: "translateY(-60%)"
     },
     rotateRight: {
       transform: "rotate(-30deg) scale(0.8)",
@@ -158,6 +170,12 @@ function SignUpForm() {
     forceUpdate();
   };
 
+  const superLike = index => {
+    swipeRight(index);
+    let audio = new Audio(superLikeAudio);
+    audio.play();
+  };
+
   const swipeLeft = () => {
     alert(
       rejectedMessages[Math.floor(Math.random() * rejectedMessages.length)]
@@ -201,6 +219,16 @@ function SignUpForm() {
           name="Swipe Left"
         >
           <Close />
+        </button>
+        <button
+          className={`${classes.button} ${classes.superLike}`}
+          onClick={() => superLike(index)}
+          name={"Super Like"}
+        >
+          <Star />
+          {/* <audio>
+            <source src="../audio/super-like.mp3" type="audio/mpeg" />
+          </audio> */}
         </button>
         <button
           className={`${classes.button} ${classes.swipeRight}`}

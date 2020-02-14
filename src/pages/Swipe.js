@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
   pageTitle: {
     color: "#fff",
     textAlign: "center",
+    margin: theme.spacing(1, 0),
   }
 }));
 
