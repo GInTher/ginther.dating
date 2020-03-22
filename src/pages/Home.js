@@ -111,7 +111,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Ginther | Home</title>
+        <title>Ginther Dating | Home</title>
       </Helmet>
       <Grid container className={classes.container} justify={"center"}>
         <Grid item lg={5}>
@@ -182,8 +182,11 @@ function Home() {
             so we've built an app that uses complex algorithms to filter only
             the{" "}
             <span className={classes.highlightedText}>
-              very greatest men around you.
+              very greatest men around you.{" "}
             </span>
+            <br />
+            <br />
+            It makes dating during a global pandemic easier than ever before!
           </h3>
           <Button
             variant={"contained"}
@@ -267,74 +270,76 @@ function Home() {
             <span className={classes.highlightedText}>totally real women!</span>
           </h3>
         </Grid>
-        <Grid item xs={11} sm={3} md={4} align={"center"}>
-          <picture>
-            <source
-              srcSet={fianceWebp}
-              type="image/webp"
-              width={150}
-              height={150}
-            />
-            <img
-              src={fiance}
-              alt={"A lady getting engaged."}
-              className={classes.image}
-              width={150}
-              height={150}
-              s
-            />
-          </picture>
-          <p className={classes.testimonialBody}>
-            "He's such a great guy, I would recommend him to every girl. He is
-            simply amazing."
-          </p>
-          <h6 className={classes.testimonialPerson}>
-            - Aliyah Profsplop, Adam's ex-fiance from 4 years ago
-          </h6>
-        </Grid>
-        <Grid item xs={11} sm={3} md={4} align={"center"}>
-          <picture>
-            <source
-              srcSet={momWebp}
-              type="image/webp"
-              width={150}
-              height={150}
-            />
-            <img
-              src={mom}
-              alt={"A handsome man and his mom."}
-              className={classes.image}
-              width={150}
-              height={150}
-            />
-          </picture>
-          <p className={classes.testimonialBody}>
-            "He's my favourite son.
-            <br />
-            But also my only son."
-          </p>
-          <h6 className={classes.testimonialPerson}>- Adam's mom</h6>
-        </Grid>
-        <Grid item xs={11} sm={3} md={4} align={"center"}>
-          <picture>
-            <source
-              srcSet={womanWebp}
-              type="image/webp"
-              width={150}
-              height={150}
-            />
-            <img
-              src={woman}
-              alt={"Girl shrugging"}
-              className={classes.image}
-              width={150}
-              height={150}
-            />
-          </picture>
-          <p className={classes.testimonialBody}>"He was alright I guess?"</p>
-          <h6 className={classes.testimonialPerson}>
-            - Adam's friend from grade 2
-          </h6>
+        <Grid container xs={10} align={"center"}>
+          <Grid item xs={11} sm={3} md={4} align={"center"}>
+            <picture>
+              <source
+                srcSet={fianceWebp}
+                type="image/webp"
+                width={150}
+                height={150}
+              />
+              <img
+                src={fiance}
+                alt={"A lady getting engaged."}
+                className={classes.image}
+                width={150}
+                height={150}
+                s
+              />
+            </picture>
+            <p className={classes.testimonialBody}>
+              "He's such a great guy, I would recommend him to every girl. He is
+              simply amazing."
+            </p>
+            <h6 className={classes.testimonialPerson}>
+              - Aliyah Profsplop, Adam's ex-fiance from 4 years ago
+            </h6>
+          </Grid>
+          <Grid item xs={11} sm={3} md={4} align={"center"}>
+            <picture>
+              <source
+                srcSet={momWebp}
+                type="image/webp"
+                width={150}
+                height={150}
+              />
+              <img
+                src={mom}
+                alt={"A handsome man and his mom."}
+                className={classes.image}
+                width={150}
+                height={150}
+              />
+            </picture>
+            <p className={classes.testimonialBody}>
+              "He's my favourite son.
+              <br />
+              But also my only son."
+            </p>
+            <h6 className={classes.testimonialPerson}>- Adam's mom</h6>
+          </Grid>
+          <Grid item xs={11} sm={3} md={4} align={"center"}>
+            <picture>
+              <source
+                srcSet={womanWebp}
+                type="image/webp"
+                width={150}
+                height={150}
+              />
+              <img
+                src={woman}
+                alt={"Girl shrugging"}
+                className={classes.image}
+                width={150}
+                height={150}
+              />
+            </picture>
+            <p className={classes.testimonialBody}>"He was alright I guess?"</p>
+            <h6 className={classes.testimonialPerson}>
+              - Adam's friend from grade 2
+            </h6>
+          </Grid>
         </Grid>
 
         <Grid item xs={11} lg={5}>
