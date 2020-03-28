@@ -22,9 +22,12 @@ import dj from "../images/occupations/dj.jpg";
 import drugDealer from "../images/occupations/drug-dealer.jpg";
 import firefighter from "../images/occupations/fire-fighter.jpg";
 import fisher from "../images/occupations/fisher.jpg";
+import globalPandemic from "../images/occupations/global-pandemic.jpg";
 import hacker from "../images/occupations/hacker.jpg";
 import hitman from "../images/occupations/hitman.jpg";
+import hockeyPlayer from "../images/occupations/hockey-player.jpg";
 import knight from "../images/occupations/knight.jpg";
+import kungFuMaster from "../images/occupations/kung-fu-master.jpg";
 import lumberjack from "../images/occupations/lumberjack.jpg";
 import madScientist from "../images/occupations/mad-scientist.jpg";
 import magician from "../images/occupations/magician.jpg";
@@ -77,9 +80,12 @@ import djWebp from "../images/occupations/dj.webp";
 import drugDealerWebp from "../images/occupations/drug-dealer.webp";
 import firefighterWebp from "../images/occupations/fire-fighter.webp";
 import fisherWebp from "../images/occupations/fisher.webp";
+import globalPandemicWebp from "../images/occupations/global-pandemic.webp";
 import hackerWebp from "../images/occupations/hacker.webp";
 import hitmanWebp from "../images/occupations/hitman.webp";
+import hockeyPlayerWebp from "../images/occupations/hockey-player.webp";
 import knightWebp from "../images/occupations/knight.webp";
+import kungFuMasterWebp from "../images/occupations/kung-fu-master.webp";
 import lumberjackWebp from "../images/occupations/lumberjack.webp";
 import madScientistWebp from "../images/occupations/mad-scientist.webp";
 import magicianWebp from "../images/occupations/magician.webp";
@@ -253,6 +259,12 @@ export const Adams = [
     occupation: "Fisherman",
   },
   {
+    imageAlt: "Handsome man, slowly destroying the world.",
+    imageSrc: globalPandemic,
+    imageSrcWebp: globalPandemicWebp,
+    occupation: "Global Pandemic",
+  },
+  {
     imageAlt: "Handsome man, about to hack your computer.",
     imageSrc: hacker,
     imageSrcWebp: hackerWebp,
@@ -265,10 +277,22 @@ export const Adams = [
     occupation: "Hitman",
   },
   {
+    imageAlt: "Handsome man, playing hockey.",
+    imageSrc: hockeyPlayer,
+    imageSrcWebp: hockeyPlayerWebp,
+    occupation: "Hockey Player",
+  },
+  {
     imageAlt: "Handsome man, being your knight in shining armor.",
     imageSrc: knight,
     imageSrcWebp: knightWebp,
     occupation: "Knight",
+  },
+  {
+    imageAlt: "Handsome man, doing some kung fu.",
+    imageSrc: kungFuMaster,
+    imageSrcWebp: kungFuMasterWebp,
+    occupation: "Kung-fu Master",
   },
   {
     imageAlt: "A handsome lumberjack.",

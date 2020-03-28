@@ -23,7 +23,7 @@ export const sendMessages = [
     "Have I ever told you how good looking handsome you are?",
     "Wow this app is so good I guess it's time for me to delete my Tinder account",
     "I've been thinking about you all day, Adam Ginther",
-    "Do I know you? ‘Cause you look a lot like my next girlfriend/boyfriend.",
+    "Do I know you? ‘Cause you look a lot like my next boyfriend.",
     "They say Disneyland is the happiest place on earth. Well apparently, no one has ever been messaging you an an app like this.",
     "Are you religious? Because you’re the answer to all my prayers.",
     "I seem to have lost my phone number. Can I have yours?",
