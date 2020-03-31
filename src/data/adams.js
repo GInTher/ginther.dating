@@ -26,9 +26,9 @@ import fisher from "../images/occupations/fisher.jpg";
 import hacker from "../images/occupations/hacker.jpg";
 import hitman from "../images/occupations/hitman.jpg";
 import hockeyPlayer from "../images/occupations/hockey-player.jpg";
-import knight from "../images/occupations/knight.jpg";
+// import knight from "../images/occupations/knight.jpg";
 import kungFuMaster from "../images/occupations/kung-fu-master.jpg";
-import lumberjack from "../images/occupations/lumberjack.jpg";
+// import lumberjack from "../images/occupations/lumberjack.jpg";
 import madScientist from "../images/occupations/mad-scientist.jpg";
 import magician from "../images/occupations/magician.jpg";
 import mobBoss from "../images/occupations/mob-boss.jpg";
@@ -41,10 +41,10 @@ import poleDancer from "../images/occupations/pole-dancer.jpg";
 import politician from "../images/occupations/politician.jpg";
 import proGamer from "../images/occupations/pro-gamer.jpg";
 import rapper from "../images/occupations/rapper.jpg";
-import realityTvStar from "../images/occupations/reality-tv-star.jpg";
+// import realityTvStar from "../images/occupations/reality-tv-star.jpg";
 import rockClimber from "../images/occupations/rock-climber.jpg";
 import rockstar from "../images/occupations/rockstar.jpg";
-import shipCaptain from "../images/occupations/ship-captain.jpg";
+// import shipCaptain from "../images/occupations/ship-captain.jpg";
 import skateboarder from "../images/occupations/skateboarder.jpg";
 import standupComedian from "../images/occupations/standup-comedian.jpg";
 import stayAtHomeFather from "../images/occupations/stay-at-home-father.jpg";
@@ -55,7 +55,6 @@ import vegan from "../images/occupations/vegan.jpg";
 import yogaInstructor from "../images/occupations/yoga-instructor.jpg";
 
 
-// TODO: Find a better way of defining these images
 import engineerWebp from "../images/occupations/engineer.webp";
 import acrobatWebp from "../images/occupations/acrobat.webp";
 import assistantRegionalManagerWebp from "../images/occupations/assistant-regional-manager.webp";
@@ -84,9 +83,9 @@ import fisherWebp from "../images/occupations/fisher.webp";
 import hackerWebp from "../images/occupations/hacker.webp";
 import hitmanWebp from "../images/occupations/hitman.webp";
 import hockeyPlayerWebp from "../images/occupations/hockey-player.webp";
-import knightWebp from "../images/occupations/knight.webp";
+// import knightWebp from "../images/occupations/knight.webp";
 import kungFuMasterWebp from "../images/occupations/kung-fu-master.webp";
-import lumberjackWebp from "../images/occupations/lumberjack.webp";
+// import lumberjackWebp from "../images/occupations/lumberjack.webp";
 import madScientistWebp from "../images/occupations/mad-scientist.webp";
 import magicianWebp from "../images/occupations/magician.webp";
 import mobBossWebp from "../images/occupations/mob-boss.webp";
@@ -101,8 +100,8 @@ import proGamerWebp from "../images/occupations/pro-gamer.webp";
 import rapperWebp from "../images/occupations/rapper.webp";
 import rockClimberWebp from "../images/occupations/rock-climber.webp";
 import rockstarWebp from "../images/occupations/rockstar.webp";
-import realityTvStarWebp from "../images/occupations/reality-tv-star.webp";
-import shipCaptainWebp from "../images/occupations/ship-captain.webp";
+// import realityTvStarWebp from "../images/occupations/reality-tv-star.webp";
+// import shipCaptainWebp from "../images/occupations/ship-captain.webp";
 import skateboarderWebp from "../images/occupations/skateboarder.webp";
 import standupComedianWebp from "../images/occupations/standup-comedian.webp";
 import stayAtHomeFatherWebp from "../images/occupations/stay-at-home-father.webp";
@@ -282,24 +281,24 @@ export const Adams = [
     imageSrcWebp: hockeyPlayerWebp,
     occupation: "Hockey Player",
   },
-  {
-    imageAlt: "Adam, being your knight in shining armor.",
-    imageSrc: knight,
-    imageSrcWebp: knightWebp,
-    occupation: "Knight",
-  },
+  // {
+  //   imageAlt: "Adam, being your knight in shining armor.",
+  //   imageSrc: knight,
+  //   imageSrcWebp: knightWebp,
+  //   occupation: "Knight",
+  // },
   {
     imageAlt: "Adam, doing some kung fu.",
     imageSrc: kungFuMaster,
     imageSrcWebp: kungFuMasterWebp,
     occupation: "Kung-fu Master",
   },
-  {
-    imageAlt: "A handsome lumberjack.",
-    imageSrc: lumberjack,
-    imageSrcWebp: lumberjackWebp,
-    occupation: "Lumberjack",
-  },
+  // {
+  //   imageAlt: "A handsome lumberjack.",
+  //   imageSrc: lumberjack,
+  //   imageSrcWebp: lumberjackWebp,
+  //   occupation: "Lumberjack",
+  // },
   {
     imageAlt: "Adam, making crazy potions.",
     imageSrc: madScientist,
@@ -376,12 +375,12 @@ export const Adams = [
     occupation: "Pro Gamer",
     bio: "Won't play any games with you."
   },
-  {
-    imageAlt: "A Adam offering a girl a rose.",
-    imageSrc: realityTvStar,
-    imageSrcWebp: realityTvStarWebp,
-    occupation: "Reality TV Star",
-  },
+  // {
+  //   imageAlt: "A Adam offering a girl a rose.",
+  //   imageSrc: realityTvStar,
+  //   imageSrcWebp: realityTvStarWebp,
+  //   occupation: "Reality TV Star",
+  // },
   {
     imageAlt: "Adam, climbing an epic mountain.",
     imageSrc: rockClimber,
@@ -394,12 +393,12 @@ export const Adams = [
     imageSrcWebp: rockstarWebp,
     occupation: "Rockstar",
   },
-  {
-    imageAlt: "A Adam captaining a ship.",
-    imageSrc: shipCaptain,
-    imageSrcWebp: shipCaptainWebp,
-    occupation: "Ship Captain",
-  },
+  // {
+  //   imageAlt: "A Adam captaining a ship.",
+  //   imageSrc: shipCaptain,
+  //   imageSrcWebp: shipCaptainWebp,
+  //   occupation: "Ship Captain",
+  // },
   {
     imageAlt: "Handsome skateboarder, doing an epic trick.",
     imageSrc: skateboarder,
