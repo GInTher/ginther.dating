@@ -184,9 +184,9 @@ function Home() {
             <span className={classes.highlightedText}>
               very greatest men around you.{" "}
             </span>
+            {/* <br />
             <br />
-            <br />
-            It makes dating during a global pandemic easier than ever before!
+            It makes dating during a global pandemic easier than ever before! */}
           </h3>
           <Button
             variant={"contained"}
@@ -306,7 +306,7 @@ function Home() {
               />
               <img
                 src={mom}
-                alt={"A handsome man and his mom."}
+                alt={"Adam and his mom."}
                 className={classes.image}
                 width={150}
                 height={150}

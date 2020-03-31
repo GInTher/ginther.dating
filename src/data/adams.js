@@ -22,7 +22,7 @@ import dj from "../images/occupations/dj.jpg";
 import drugDealer from "../images/occupations/drug-dealer.jpg";
 import firefighter from "../images/occupations/fire-fighter.jpg";
 import fisher from "../images/occupations/fisher.jpg";
-import globalPandemic from "../images/occupations/global-pandemic.jpg";
+// import globalPandemic from "../images/occupations/global-pandemic.jpg";
 import hacker from "../images/occupations/hacker.jpg";
 import hitman from "../images/occupations/hitman.jpg";
 import hockeyPlayer from "../images/occupations/hockey-player.jpg";
@@ -80,7 +80,7 @@ import djWebp from "../images/occupations/dj.webp";
 import drugDealerWebp from "../images/occupations/drug-dealer.webp";
 import firefighterWebp from "../images/occupations/fire-fighter.webp";
 import fisherWebp from "../images/occupations/fisher.webp";
-import globalPandemicWebp from "../images/occupations/global-pandemic.webp";
+// import globalPandemicWebp from "../images/occupations/global-pandemic.webp";
 import hackerWebp from "../images/occupations/hacker.webp";
 import hitmanWebp from "../images/occupations/hitman.webp";
 import hockeyPlayerWebp from "../images/occupations/hockey-player.webp";
@@ -114,13 +114,13 @@ import yogaInstructorWebp from "../images/occupations/yoga-instructor.webp";
 
 export const Adams = [
   {
-    imageAlt: "Handsome man, sitting at a computer.",
+    imageAlt: "Adam, sitting at a computer.",
     imageSrc: engineer,
     imageSrcWebp: engineerWebp,
     occupation: "Software Engineer",
   },
   {
-    imageAlt: "Handsome man riding a unicycle across a very small line.",
+    imageAlt: "Adam riding a unicycle across a very small line.",
     imageSrc: acrobat,
     imageSrcWebp: acrobatWebp,
     occupation: "Acrobat",
@@ -134,76 +134,76 @@ export const Adams = [
     bio: "Is it a beet season? Because you look ripe and ready for picking."
   },
   {
-    imageAlt: "A handsome man dancing with a woman.",
+    imageAlt: "A Adam dancing with a woman.",
     imageSrc: ballroomDancer,
     imageSrcWebp: ballroomDancerWebp,
     occupation: "Ballroom Dancer",
   },
   {
-    imageAlt: "Handsome man, with a big bag of money.",
+    imageAlt: "Adam, with a big bag of money.",
     imageSrc: bankRobber,
     imageSrcWebp: bankRobberWebp,
     occupation: "Bank Robber",
     bio: "Will rob a bank, but will also rob you of your love."
   },
   {
-    imageAlt: "Handsome man, serving liquor.",
+    imageAlt: "Adam, serving liquor.",
     imageSrc: bartender,
     imageSrcWebp: bartenderWebp,
     occupation: "Bartender",
   },
   {
-    imageAlt: "Handsome man, playing basketball.",
+    imageAlt: "Adam, playing basketball.",
     imageSrc: basketballPlayer,
     imageSrcWebp: basketballPlayerWebp,
     occupation: "Basketball Player",
   },
   {
-    imageAlt: "Handsome man, building a handsome body.",
+    imageAlt: "Adam, building a handsome body.",
     imageSrc: bodybuilder,
     imageSrcWebp: bodybuilderWebp,
     occupation: "Body Builder",
   },
   {
-    imageAlt: "Handsome man, kicking ass.",
+    imageAlt: "Adam, kicking ass.",
     imageSrc: boxer,
     imageSrcWebp: boxerWebp,
     occupation: "Boxer",
     bio: "I look good in boxers too!"
   },
   {
-    imageAlt: "Handsome man doing a totally cool break dancing trick.",
+    imageAlt: "Adam doing a totally cool break dancing trick.",
     imageSrc: breakDancer,
     imageSrcWebp: breakDancerWebp,
     occupation: "Break Dancer",
   },
   {
-    imageAlt: "Handsome man playing the saxophone on the street.",
+    imageAlt: "Adam playing the saxophone on the street.",
     imageSrc: busker,
     imageSrcWebp: buskerWebp,
     occupation: "Busker",
   },
   {
-    imageAlt: "Handsome man, serving a salad.",
+    imageAlt: "Adam, serving a salad.",
     imageSrc: chef,
     imageSrcWebp: chefWebp,
     occupation: "Chef",
   },
   {
-    imageAlt: "Handsome man, asking for help.",
+    imageAlt: "Adam, asking for help.",
     imageSrc: collegeStudent,
     imageSrcWebp: collegeStudentWebp,
     occupation: "College Student",
     bio: "Will be able to study you very well."
   },
   {
-    imageAlt: "Handsome man, composing some epic music.",
+    imageAlt: "Adam, composing some epic music.",
     imageSrc: composer,
     imageSrcWebp: composerWebp,
     occupation: "Composer",
   },
   {
-    imageAlt: "Handsome man, in jail.",
+    imageAlt: "Adam, in jail.",
     imageSrc: conArtist,
     imageSrcWebp: conArtistWebp,
     occupation: "Con Artist",
@@ -215,81 +215,81 @@ export const Adams = [
     occupation: "Cowboy",
   },
   {
-    imageAlt: "Handsome man, doing a cool motorcycle trick!",
+    imageAlt: "Adam, doing a cool motorcycle trick!",
     imageSrc: daredevil,
     imageSrcWebp: daredevilWebp,
     occupation: "Daredevil",
   },
   {
-    imageAlt: "Handsome man, being a great dentist.",
+    imageAlt: "Adam, being a great dentist.",
     imageSrc: dentist,
     imageSrcWebp: dentistWebp,
     occupation: "Dentist",
   },
   {
-    imageAlt: "Handsome man, being a great detective.",
+    imageAlt: "Adam, being a great detective.",
     imageSrc: detective,
     imageSrcWebp: detectiveWebp,
     occupation: "Detective",
     bio: "Can always investigate your broken heart ;)"
   },
   {
-    imageAlt: "Handsome man, being an amazing DJ.",
+    imageAlt: "Adam, being an amazing DJ.",
     imageSrc: dj,
     imageSrcWebp: djWebp,
     occupation: "DJ",
   },
   {
-    imageAlt: "Handsome man, offering you drugs.",
+    imageAlt: "Adam, offering you drugs.",
     imageSrc: drugDealer,
     imageSrcWebp: drugDealerWebp,
     occupation: "Drug Dealer",
   },
   {
-    imageAlt: "Handsome man, also saving a child.",
+    imageAlt: "Adam, also saving a child.",
     imageSrc: firefighter,
     imageSrcWebp: firefighterWebp,
     occupation: "Firefighter",
     bio: "The only thing that's hotter than the fires I save people from is you."
   },
   {
-    imageAlt: "Handsome man, also catching some fish.",
+    imageAlt: "Adam, also catching some fish.",
     imageSrc: fisher,
     imageSrcWebp: fisherWebp,
     occupation: "Fisherman",
   },
+  // {
+  //   imageAlt: "Adam, slowly destroying the world.",
+  //   imageSrc: globalPandemic,
+  //   imageSrcWebp: globalPandemicWebp,
+  //   occupation: "Global Pandemic",
+  // },
   {
-    imageAlt: "Handsome man, slowly destroying the world.",
-    imageSrc: globalPandemic,
-    imageSrcWebp: globalPandemicWebp,
-    occupation: "Global Pandemic",
-  },
-  {
-    imageAlt: "Handsome man, about to hack your computer.",
+    imageAlt: "Adam, about to hack your computer.",
     imageSrc: hacker,
     imageSrcWebp: hackerWebp,
     occupation: "Hacker",
   },
   {
-    imageAlt: "Handsome man, about to 360 no-scope someone.",
+    imageAlt: "Adam, about to 360 no-scope someone.",
     imageSrc: hitman,
     imageSrcWebp: hitmanWebp,
     occupation: "Hitman",
   },
   {
-    imageAlt: "Handsome man, playing hockey.",
+    imageAlt: "Adam, playing hockey.",
     imageSrc: hockeyPlayer,
     imageSrcWebp: hockeyPlayerWebp,
     occupation: "Hockey Player",
   },
   {
-    imageAlt: "Handsome man, being your knight in shining armor.",
+    imageAlt: "Adam, being your knight in shining armor.",
     imageSrc: knight,
     imageSrcWebp: knightWebp,
     occupation: "Knight",
   },
   {
-    imageAlt: "Handsome man, doing some kung fu.",
+    imageAlt: "Adam, doing some kung fu.",
     imageSrc: kungFuMaster,
     imageSrcWebp: kungFuMasterWebp,
     occupation: "Kung-fu Master",
@@ -301,20 +301,20 @@ export const Adams = [
     occupation: "Lumberjack",
   },
   {
-    imageAlt: "Handsome man, making crazy potions.",
+    imageAlt: "Adam, making crazy potions.",
     imageSrc: madScientist,
     imageSrcWebp: madScientistWebp,
     occupation: "Mad Scientist",
     bio: "I'm sure we'll have great chemistry!"
   },
   {
-    imageAlt: "Handsome man, performing some CRAZY magic.",
+    imageAlt: "Adam, performing some CRAZY magic.",
     imageSrc: magician,
     imageSrcWebp: magicianWebp,
     occupation: "Magician",
   },
   {
-    imageAlt: "Handsome man, with lots of money.",
+    imageAlt: "Adam, with lots of money.",
     imageSrc: millionaire,
     imageSrcWebp: millionaireWebp,
     occupation: "Millionaire",
@@ -332,26 +332,26 @@ export const Adams = [
     occupation: "Ninja",
   },
   {
-    imageAlt: "Handsome man, telling you the news.",
+    imageAlt: "Adam, telling you the news.",
     imageSrc: newsAnchor,
     imageSrcWebp: newsAnchorWebp,
     occupation: "News Anchor",
     bio: "How I gained your love and affection, tonight at 7!"
   },
   {
-    imageAlt: "Handsome man, stealing a wallet with a lot of money.",
+    imageAlt: "Adam, stealing a wallet with a lot of money.",
     imageSrc: pickpocket,
     imageSrcWebp: pickpocketWebp,
     occupation: "Pickpocket",
   },
   {
-    imageAlt: "Handsome man, playing poker.",
+    imageAlt: "Adam, playing poker.",
     imageSrc: pokerPlayer,
     imageSrcWebp: pokerPlayerWebp,
     occupation: "Poker Player",
   },
   {
-    imageAlt: "Handsome man, handling a pole.",
+    imageAlt: "Adam, handling a pole.",
     imageSrc: poleDancer,
     imageSrcWebp: poleDancerWebp,
     occupation: "Pole Dancer",
@@ -364,7 +364,7 @@ export const Adams = [
     bio: "I'll always have an extra pair of handcuffs for you."
   },
   {
-    imageAlt: "Handsome man, doing some crazy politics.",
+    imageAlt: "Adam, doing some crazy politics.",
     imageSrc: politician,
     imageSrcWebp: politicianWebp,
     occupation: "Politician",
@@ -377,13 +377,13 @@ export const Adams = [
     bio: "Won't play any games with you."
   },
   {
-    imageAlt: "A handsome man offering a girl a rose.",
+    imageAlt: "A Adam offering a girl a rose.",
     imageSrc: realityTvStar,
     imageSrcWebp: realityTvStarWebp,
     occupation: "Reality TV Star",
   },
   {
-    imageAlt: "Handsome man, climbing an epic mountain.",
+    imageAlt: "Adam, climbing an epic mountain.",
     imageSrc: rockClimber,
     imageSrcWebp: rockClimberWebp,
     occupation: "Rock Climber",
@@ -395,7 +395,7 @@ export const Adams = [
     occupation: "Rockstar",
   },
   {
-    imageAlt: "A handsome man captaining a ship.",
+    imageAlt: "A Adam captaining a ship.",
     imageSrc: shipCaptain,
     imageSrcWebp: shipCaptainWebp,
     occupation: "Ship Captain",
@@ -413,20 +413,20 @@ export const Adams = [
     occupation: "Soundcloud Rapper",
   },
   {
-    imageAlt: "Handsome man, doing stand-up comedy.",
+    imageAlt: "Adam, doing stand-up comedy.",
     imageSrc: standupComedian,
     imageSrcWebp: standupComedianWebp,
     occupation: "Stand-up Comedian",
   },
   {
-    imageAlt: "Handsome man, with his children.",
+    imageAlt: "Adam, with his children.",
     imageSrc: stayAtHomeFather,
     imageSrcWebp: stayAtHomeFatherWebp,
     occupation: "Stay-at-home Father",
     bio: "I have three kids from three different wives, and I'm always open for a fourth."
   },
   {
-    imageAlt: "Handsome man, eating chips.",
+    imageAlt: "Adam, eating chips.",
     imageSrc: stayAtHomeSon,
     imageSrcWebp: stayAtHomeSonWebp,
     occupation: "Stay-at-home Son",
@@ -445,13 +445,13 @@ export const Adams = [
     occupation: "Super Model",
   },
   {
-    imageAlt: "A handsome man eating a carrot, refusing steak.",
+    imageAlt: "A Adam eating a carrot, refusing steak.",
     imageSrc: vegan,
     imageSrcWebp: veganWebp,
     occupation: "Vegan",
   },
   {
-    imageAlt: "A handsome man teaching yoga.",
+    imageAlt: "A Adam teaching yoga.",
     imageSrc: yogaInstructor,
     imageSrcWebp: yogaInstructorWebp,
     occupation: "Yoga Instructor",

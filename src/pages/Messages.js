@@ -93,7 +93,6 @@ function Messages(props) {
                       🙏
                     </span>
                   </p>
-                  {/* <img src={beggingImage} alt={"A handsome man, begging."} /> */}
                 </div>
               )}
               {Adams.map(i => {
@@ -108,7 +107,7 @@ function Messages(props) {
                       <ListItem>
                         <ListItemAvatar>
                           <Avatar
-                            alt="A very handsome man"
+                            alt="Adam"
                             src={i.imageSrc}
                             className={classes.avatar}
                           />
